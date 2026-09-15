@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/recipe-box/recipe.schema.json",
+  "title": "Recipe frontmatter",
+  "description": "The YAML frontmatter of a recipe-box recipe file",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "cuisine",
+    "category",
+    "servings",
+    "prep_time",
+    "cook_time",
+    "difficulty",
+    "tags",
+    "status",
+    "source",
+    "created",
+    "updated"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 64,
+      "description": "Slug; must equal the filename stem"
+    },
+    "title": { "type": "string", "minLength": 3, "maxLength": 120 },
+    "cuisine": {
+      "type": "string",
+      "pattern": "^[a-z]+(-[a-z]+)*$",
+      "examples": ["italian", "japanese", "middle-eastern", "indian", "thai"]
+    },
+    "category": {
+      "enum": ["breakfast", "lunch", "dinner", "snack", "dessert", "side", "sauce", "drink"]
+    },
+    "servings": { "type": "integer", "minimum": 1 },
+    "prep_time": { "type": "integer", "minimum": 0, "description": "minutes" },
+    "cook_time": { "type": "integer", "minimum": 0, "description": "minutes" },
+    "difficulty": { "enum": ["easy", "medium", "hard"] },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "uniqueItems": true
+    },
+    "status": { "enum": ["draft", "published"] },
+    "source": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "description": "Site, book, or 'Original creation'" },
+        "url": { "type": "string", "format": "uri" },
+        "author": { "type": "string" },
+        "license": { "type": "string", "examples": ["CC-BY-4.0"] }
+      }
+    },
+    "nutrition": {
+      "type": "object",
+      "description": "Per serving; estimates may be strings prefixed with ~",
+      "properties": {
+        "calories": {},
+        "protein_g": {},
+        "carbs_g": {},
+        "fat_g": {},
+        "fiber_g": {},
+        "sodium_mg": {}
+      },
+      "additionalProperties": false
+    },
+    "created": { "type": "string", "format": "date" },
+    "updated": { "type": "string", "format": "date" },
+    "image": { "type": "string", "format": "uri", "description": "Photo URL for the web UI" }
+  }
+}

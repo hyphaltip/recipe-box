@@ -1,0 +1,139 @@
+[
+  {
+    "id": "shakshuka",
+    "title": "Shakshuka (Eggs Poached in Spiced Tomato Sauce)",
+    "cuisine": "middle-eastern",
+    "category": "breakfast",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 25,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "gluten-free",
+      "one-pan",
+      "budget"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~250",
+      "protein_g": "~13",
+      "carbs_g": "~17",
+      "fat_g": "~15",
+      "fiber_g": "~4"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "shakshuka",
+    "file": "shakshuka.md"
+  },
+  {
+    "id": "sheet-pan-miso-salmon",
+    "title": "Sheet-Pan Miso Salmon with Bok Choy",
+    "cuisine": "japanese",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 15,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "gluten-free",
+      "dairy-free",
+      "quick",
+      "one-pan",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~400",
+      "protein_g": "~34",
+      "carbs_g": "~11",
+      "fat_g": "~22"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "sheet-pan-miso-salmon",
+    "file": "sheet-pan-miso-salmon.md"
+  },
+  {
+    "id": "turkey-and-bean-chili",
+    "title": "Turkey and White Bean Chili with Dried Chiles",
+    "cuisine": "american",
+    "category": "dinner",
+    "servings": 8,
+    "prep_time": 25,
+    "cook_time": 150,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "batch-cook",
+      "meal-prep",
+      "comfort-food",
+      "winter"
+    ],
+    "status": "published",
+    "image": "https://assets.epicurious.com/photos/63f702997760313741ddb9a5/16:9/w_5536,h_3114,c_limit/HLY_0220_Chili-16x9.jpg",
+    "source": {
+      "name": "epicurious.com",
+      "url": "https://www.epicurious.com/recipes/food/views/ba-syn-turkey-and-bean-chili",
+      "author": "Carla Lalli Music"
+    },
+    "nutrition": {
+      "calories": "~460",
+      "protein_g": "~38",
+      "carbs_g": "~18",
+      "fat_g": "~26"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "turkey-and-bean-chili",
+    "file": "turkey-and-bean-chili.md"
+  },
+  {
+    "id": "tuscan-white-bean-kale-soup",
+    "title": "Tuscan White Bean & Kale Soup",
+    "cuisine": "italian",
+    "category": "lunch",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 30,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "gluten-free",
+      "budget",
+      "batch-cook",
+      "meal-prep",
+      "high-protein"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~290",
+      "protein_g": "~14",
+      "carbs_g": "~38",
+      "fat_g": "~8",
+      "fiber_g": "~9"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "tuscan-white-bean-kale-soup",
+    "file": "tuscan-white-bean-kale-soup.md"
+  }
+]

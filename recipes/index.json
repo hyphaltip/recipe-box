@@ -344,6 +344,38 @@
     "file": "moroccan-chickpea-stew.md"
   },
   {
+    "id": "nasi-goreng",
+    "title": "Nasi Goreng (Indonesian Fried Rice)",
+    "cuisine": "indonesian",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 15,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "budget",
+      "quick",
+      "one-pan"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~420",
+      "protein_g": "~15",
+      "carbs_g": "~62",
+      "fat_g": "~12"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "nasi-goreng",
+    "file": "nasi-goreng.md"
+  },
+  {
     "id": "pad-krapow-thai-basil-chicken",
     "title": "Pad Krapow (Thai Basil Chicken)",
     "cuisine": "thai",

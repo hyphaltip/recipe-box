@@ -1,6 +1,6 @@
 ---
-id: vanilla-ice-cream
-title: Vanilla Ice Cream
+id: custard-vanilla-ice-cream
+title: Custard-Style Vanilla Ice Cream
 cuisine: american
 category: dessert
 servings: 6
@@ -20,9 +20,10 @@ created: '2026-09-16'
 updated: '2026-09-16'
 ---
 
-# Vanilla Ice Cream
+# Custard-Style Vanilla Ice Cream
 
-> A classic custard-based vanilla ice cream, perfect for summer desserts.
+> A classic egg-yolk custard vanilla ice cream — richer and silkier than a
+> no-cook base, perfect for summer desserts.
 
 ## Ingredients
 - 480 ml (2 cups) heavy cream

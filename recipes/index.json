@@ -137,41 +137,6 @@
     "file": "caribbean-curried-coconut-lentil-sweet-potato-soup.md"
   },
   {
-    "id": "chana-masala-2",
-    "title": "Chana Masala",
-    "cuisine": "indian",
-    "category": "dinner",
-    "servings": 4,
-    "prep_time": 10,
-    "cook_time": 25,
-    "difficulty": "easy",
-    "tags": [
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "dairy-free",
-      "budget",
-      "healthy",
-      "comfort-food",
-      "batch-cook",
-      "meal-prep"
-    ],
-    "status": "draft",
-    "source": {
-      "name": "Captured via Telegram"
-    },
-    "nutrition": {
-      "calories": 300,
-      "protein_g": 12,
-      "carbs_g": 41,
-      "fat_g": 10
-    },
-    "created": "2026-09-16",
-    "updated": "2026-09-16",
-    "slug": "chana-masala-2",
-    "file": "chana-masala-2.md"
-  },
-  {
     "id": "chana-masala",
     "title": "Chana Masala (Spiced Chickpea Curry)",
     "cuisine": "indian",
@@ -276,6 +241,37 @@
     "updated": "2026-09-15",
     "slug": "crispy-roasted-chickpeas",
     "file": "crispy-roasted-chickpeas.md"
+  },
+  {
+    "id": "custard-vanilla-ice-cream",
+    "title": "Custard-Style Vanilla Ice Cream",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 6,
+    "prep_time": 20,
+    "cook_time": 10,
+    "difficulty": "medium",
+    "tags": [
+      "vegetarian",
+      "gluten-free",
+      "nut-free",
+      "summer",
+      "kid-friendly"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 430,
+      "protein_g": 6,
+      "carbs_g": 30,
+      "fat_g": 35
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "custard-vanilla-ice-cream",
+    "file": "custard-vanilla-ice-cream.md"
   },
   {
     "id": "everyday-sourdough-boule",
@@ -1373,37 +1369,6 @@
     "updated": "2026-09-16",
     "slug": "vanilla-ice-cream-2",
     "file": "vanilla-ice-cream-2.md"
-  },
-  {
-    "id": "vanilla-ice-cream",
-    "title": "Vanilla Ice Cream",
-    "cuisine": "american",
-    "category": "dessert",
-    "servings": 6,
-    "prep_time": 20,
-    "cook_time": 10,
-    "difficulty": "medium",
-    "tags": [
-      "vegetarian",
-      "gluten-free",
-      "nut-free",
-      "summer",
-      "kid-friendly"
-    ],
-    "status": "draft",
-    "source": {
-      "name": "Captured via Telegram"
-    },
-    "nutrition": {
-      "calories": 430,
-      "protein_g": 6,
-      "carbs_g": 30,
-      "fat_g": 35
-    },
-    "created": "2026-09-16",
-    "updated": "2026-09-16",
-    "slug": "vanilla-ice-cream",
-    "file": "vanilla-ice-cream.md"
   },
   {
     "id": "lemongrass-chicken-noodle-bowls",

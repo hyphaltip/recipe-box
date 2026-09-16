@@ -343,6 +343,38 @@
     "file": "misir-wot-ethiopian-red-lentils.md"
   },
   {
+    "id": "moqueca-brazilian-fish-stew",
+    "title": "Moqueca (Brazilian Fish Stew)",
+    "cuisine": "brazilian",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 20,
+    "cook_time": 30,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "gluten-free",
+      "dairy-free",
+      "one-pan"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~330",
+      "protein_g": "~28",
+      "carbs_g": "~10",
+      "fat_g": "~19"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "moqueca-brazilian-fish-stew",
+    "file": "moqueca-brazilian-fish-stew.md"
+  },
+  {
     "id": "moroccan-chickpea-stew",
     "title": "Moroccan Chickpea & Sweet Potato Stew",
     "cuisine": "moroccan",

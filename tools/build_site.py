@@ -19,12 +19,14 @@ import re
 import shutil
 import sys
 from collections import Counter
+from datetime import date
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
-from recipe_lib import REPO_ROOT, load_all_recipes
+from recipe_lib import REPO_ROOT, load_all_recipes, load_recipe
 
 SITE_DIR = REPO_ROOT / "site"
+MEAL_PLANS_DIR = REPO_ROOT / "meal-plans"
 GITHUB_BASE = "https://github.com/hyphaltip/recipe-box"
 
 CATEGORY_ORDER = ["breakfast", "lunch", "dinner", "side", "snack", "bread", "quickbread", "pie", "cake", "cinnamon-rolls", "dessert", "sauce", "drink"]
@@ -90,8 +92,25 @@ def parse_body(body: str) -> dict:
             sections.append(current)
             continue
 
+        if stripped.startswith("### ") and current is not None:
+            current["blocks"].append(["h3", [stripped[4:].strip()]])
+            continue
+
         if current is None:
             hook_lines.append(stripped)
+            continue
+
+        if stripped.startswith("|"):
+            cells = [c.strip() for c in stripped.strip("|").split("|")]
+            if not (current["blocks"] and current["blocks"][-1][0] == "table"):
+                current["blocks"].append(["table", {"head": [], "rows": []}])
+            table = current["blocks"][-1][1]
+            if all(re.fullmatch(r":?-{3,}:?", c) for c in cells):
+                pass  # separator row between head and body
+            elif not table["head"]:
+                table["head"] = cells
+            else:
+                table["rows"].append(cells)
             continue
 
         bullet = re.match(r"^[-*]\s+(.*)$", stripped)
@@ -122,7 +141,7 @@ def render_sections(sections: list[dict]) -> str:
             if merged and merged[-1][0] == kind and kind in ("ul", "ol"):
                 merged[-1][1].extend(items)
             else:
-                merged.append((kind, list(items)))
+                merged.append((kind, items))
         for kind, items in merged:
             if kind == "ul":
                 lis = "".join(f"<li>{inline_md(item)}</li>" for item in items)
@@ -130,6 +149,18 @@ def render_sections(sections: list[dict]) -> str:
             elif kind == "ol":
                 lis = "".join(f"<li>{inline_md(item)}</li>" for item in items)
                 out.append(f'<ol class="steps">{lis}</ol>')
+            elif kind == "table":
+                thead = "".join(f"<th>{inline_md(c)}</th>" for c in items["head"])
+                trs = "".join(
+                    "<tr>" + "".join(f"<td>{inline_md(c)}</td>" for c in row) + "</tr>"
+                    for row in items["rows"]
+                )
+                out.append(
+                    f'<div class="tscroll"><table><thead><tr>{thead}</tr></thead>'
+                    f"<tbody>{trs}</tbody></table></div>"
+                )
+            elif kind == "h3":
+                out.append("".join(f"<h3>{inline_md(item)}</h3>" for item in items))
             else:
                 out.append("".join(f"<p>{inline_md(item)}</p>" for item in items))
         out.append("</section>")
@@ -265,9 +296,33 @@ footer.site { padding: 26px 0 40px; color: var(--muted); font-size: 0.85rem; bor
   aside.raside { position: static; }
 }
 
+/* ---------- meal plans ---------- */
+.narrow { max-width: 920px; }
+.planslink {
+  display: inline-block; margin-top: 14px; padding: 9px 18px;
+  border: 1px solid var(--accent); color: var(--accent); border-radius: 999px;
+  font-weight: 600; font-size: 0.95rem;
+}
+.planslink:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.tscroll { overflow-x: auto; margin: 4px 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.93rem; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+thead th {
+  background: var(--accent-soft); font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+tbody tr:nth-child(odd) td { background: color-mix(in srgb, var(--card) 55%, var(--bg)); }
+.planchips { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 12px 0 4px; }
+.planchiplabel { color: var(--muted); font-size: 0.85rem; margin-right: 4px; }
+.planchip {
+  border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 4px 12px; font-size: 0.85rem;
+}
+.planchip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
 @media print {
   body { background: #fff; color: #000; font-size: 12pt; }
-  .controls, .rtop, .card .thumb, footer.site, .back { display: none !important; }
+  .controls, .rtop, .card .thumb, footer.site, .back, .planchips { display: none !important; }
   .card, .panel { box-shadow: none; border-color: #ccc; }
   .cols { grid-template-columns: 1fr; gap: 12px; }
   aside.raside { position: static; }
@@ -404,8 +459,11 @@ def card_data(recipes: list[dict]) -> list[dict]:
     return out
 
 
-def index_page(recipes: list[dict]) -> str:
+def index_page(recipes: list[dict], plans: list[dict] | None = None) -> str:
     data = card_data(recipes)
+    plans_link = ""
+    if plans:
+        plans_link = '<p><a class="planslink" href="meal-plans.html">Browse meal plans →</a></p>'
     cuisines = sorted({r["cuisine"] for r in data})
     categories = [c for c in CATEGORY_ORDER if any(r["category"] == c for r in data)]
     diets = [t for t in DIET_TAGS if any(t in r["tags"] for r in data)]
@@ -430,6 +488,7 @@ def index_page(recipes: list[dict]) -> str:
       <span><b>{sum(1 for r in data if 'vegan' in r['tags'])}</b> vegan</span>
       <span><b>{sum(1 for r in data if 'vegetarian' in r['tags'])}</b> vegetarian</span>
     </div>
+    {plans_link}
   </header>
 
   <div class="controls">
@@ -537,6 +596,140 @@ render();
 
 
 # ---------------------------------------------------------------------------
+# Meal plan pages
+# ---------------------------------------------------------------------------
+
+
+def load_meal_plans() -> list[dict]:
+    """Load every meal plan in meal-plans/. Returns [] if the directory is empty."""
+    if not MEAL_PLANS_DIR.is_dir():
+        return []
+    plans = []
+    for path in sorted(MEAL_PLANS_DIR.glob("*.md")):
+        try:
+            plans.append(load_recipe(path))
+        except ValueError as exc:
+            print(f"  warning: unparseable meal plan {path.name}: {exc}", file=sys.stderr)
+    return plans
+
+
+def pretty_date(value) -> str:
+    try:
+        return date.fromisoformat(str(value)).strftime("%b %d, %Y").replace(" 0", " ")
+    except ValueError:
+        return str(value)
+
+
+def meal_plan_page(plan: dict, titles: dict) -> str:
+    """Render one meal plan -> site/meal-plans/<id>.html."""
+    meta = plan["meta"]
+    parsed = parse_body(plan["body"])
+    title = esc(meta.get("title", plan["slug"]))
+    week = esc(pretty_date(meta.get("week_of", "")))
+    servings = esc(meta.get("servings", "?"))
+
+    chip_list = [
+        '<a class="planchip" href="../recipes/' + esc(slug) + '.html">'
+        + esc(titles[slug]) + "</a>"
+        for slug in meta.get("recipes", []) if slug in titles
+    ]
+    chips = ""
+    if chip_list:
+        chips = (
+            '<div class="planchips"><span class="planchiplabel">Recipes in this plan:</span>'
+            + "".join(chip_list) + "</div>"
+        )
+
+    meta_bits = (
+        f'<span><b>{week}</b> (week of)</span>'
+        f'<span><b>{servings}</b> people</span>'
+        f'<span><b>{len(meta.get("recipes", []))}</b> recipes</span>'
+    )
+    source_link = f'<a href="{GITHUB_BASE}/blob/main/meal-plans/{esc(plan["slug"])}.md" rel="noopener">view source on GitHub</a>'
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title} · Recipe Box Meal Plans</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap narrow">
+  <div class="rtop">
+    <a class="back" href="../meal-plans.html">← All meal plans</a>
+    <button class="plain" onclick="window.print()">Print plan</button>
+  </div>
+  <header class="rhead">
+    <div class="pills">
+      <span class="pill">meal plan</span>
+      <span class="pill">week of {week}</span>
+    </div>
+    <h1>{title}</h1>
+    <p class="hook">{inline_md(parsed['hook'])}</p>
+    <div class="rmeta">{meta_bits}</div>
+    {chips}
+  </header>
+  <article>
+    {render_sections(parsed['sections'])}
+    <div class="sourcebox">Meal plan generated from the recipe database · {source_link}</div>
+  </article>
+  <footer class="site">Recipe Box · built from the recipe database</footer>
+</div>
+</body>
+</html>
+"""
+
+
+def meal_plans_index(plans: list[dict]) -> str:
+    """Render the meal-plan listing -> site/meal-plans.html."""
+    cards = []
+    for plan in plans:
+        meta = plan["meta"]
+        parsed = parse_body(plan["body"])
+        count = len(meta.get("recipes", []))
+        week = esc(pretty_date(meta.get("week_of", "")))
+        meta_line = (
+            f"Week of {week} · serves {esc(meta.get('servings', '?'))} · {count} recipes"
+        )
+        cards.append(
+            '<a class="card" href="meal-plans/' + esc(plan["slug"]) + '.html">'
+            '<div class="body">'
+            '<div class="cuisine">meal plan</div>'
+            '<h3>' + esc(meta.get("title", plan["slug"])) + '</h3>'
+            '<div class="meta">' + meta_line + "</div>"
+            '<p class="snip">' + inline_md(parsed["hook"]) + "</p>"
+            "</div></a>"
+        )
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meal Plans · Recipe Box</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="rtop">
+    <a class="back" href="index.html">← All recipes</a>
+  </div>
+  <header class="hero">
+    <h1>Meal Plans</h1>
+    <p class="tagline">Full weeks of cooking — leftover chaining, prep lists, and grocery lists — built from the recipe database.</p>
+  </header>
+  <main class="grid">
+    {''.join(cards)}
+  </main>
+  <footer class="site">Recipe Box · <a href="{GITHUB_BASE}" rel="noopener">on GitHub</a></footer>
+</div>
+</body>
+</html>
+"""
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 
@@ -563,11 +756,38 @@ def build() -> list[dict]:
     for recipe in published:
         (pages_dir / f"{recipe['slug']}.html").write_text(recipe_page(recipe), encoding="utf-8")
 
-    (SITE_DIR / "index.html").write_text(index_page(published), encoding="utf-8")
+    # Meal plans: listing page + one page per plan, with slug cross-checks
+    titles = {r["slug"]: r["meta"]["title"] for r in published}
+    plans = [p for p in load_meal_plans() if p["meta"].get("status") == "published"]
+    for plan in plans:
+        for slug in plan["meta"].get("recipes", []):
+            if slug not in titles:
+                print(
+                    f"  warning: meal plan '{plan['slug']}' references unknown recipe '{slug}'",
+                    file=sys.stderr,
+                )
+    if plans:
+        plans_dir = SITE_DIR / "meal-plans"
+        plans_dir.mkdir(parents=True, exist_ok=True)
+        for old in plans_dir.glob("*.html"):
+            old.unlink()
+        for plan in plans:
+            (plans_dir / f"{plan['slug']}.html").write_text(
+                meal_plan_page(plan, titles), encoding="utf-8"
+            )
+        (SITE_DIR / "meal-plans.html").write_text(meal_plans_index(plans), encoding="utf-8")
+    else:
+        (SITE_DIR / "meal-plans.html").unlink(missing_ok=True)
+        shutil.rmtree(SITE_DIR / "meal-plans", ignore_errors=True)
+
+    (SITE_DIR / "index.html").write_text(index_page(published, plans), encoding="utf-8")
     (assets / "style.css").write_text(STYLESHEET.strip() + "\n", encoding="utf-8")
 
     print(f"Site built → {SITE_DIR}")
-    print(f"  {len(published)} recipe pages · index.html · assets/style.css")
+    print(
+        f"  {len(published)} recipe pages · {len(plans)} meal plan pages · "
+        "index.html · meal-plans.html · assets/style.css"
+    )
     return published
 
 

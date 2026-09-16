@@ -130,6 +130,10 @@ slugs used). A plan week must: cover 7 days × (breakfast, lunch, dinner), use
 each dinner's leftovers in a following lunch where sensible, include a Sunday
 prep list, and ship with a grocery list grouped by store section.
 
+`tools/build_site.py` renders published plans to the site: a listing page at
+`meal-plans.html` and one page per plan at `meal-plans/<id>.html`. The build
+prints a warning if a plan references a recipe slug that isn't published.
+
 ## Editing rules
 
 - `id` and filename never change after publication (links depend on them).

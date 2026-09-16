@@ -111,7 +111,7 @@ with the domain attached to the repo's Pages settings and HTTPS enforced:
 - [x] GitHub Pages deployment with auto-deploy on recipe changes
 - [x] Custom domain: <https://meals.stajich.org/>
 - [x] Meal plans that reference recipes by slug
-- [ ] Meal-plan pages on the live site
+- [x] Meal-plan pages on the live site
 - [ ] Nutrition estimation for recipes missing it
 
 ## License

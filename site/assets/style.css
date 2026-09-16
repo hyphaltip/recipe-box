@@ -122,9 +122,33 @@ footer.site { padding: 26px 0 40px; color: var(--muted); font-size: 0.85rem; bor
   aside.raside { position: static; }
 }
 
+/* ---------- meal plans ---------- */
+.narrow { max-width: 920px; }
+.planslink {
+  display: inline-block; margin-top: 14px; padding: 9px 18px;
+  border: 1px solid var(--accent); color: var(--accent); border-radius: 999px;
+  font-weight: 600; font-size: 0.95rem;
+}
+.planslink:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.tscroll { overflow-x: auto; margin: 4px 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.93rem; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+thead th {
+  background: var(--accent-soft); font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+tbody tr:nth-child(odd) td { background: color-mix(in srgb, var(--card) 55%, var(--bg)); }
+.planchips { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 12px 0 4px; }
+.planchiplabel { color: var(--muted); font-size: 0.85rem; margin-right: 4px; }
+.planchip {
+  border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 4px 12px; font-size: 0.85rem;
+}
+.planchip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
 @media print {
   body { background: #fff; color: #000; font-size: 12pt; }
-  .controls, .rtop, .card .thumb, footer.site, .back { display: none !important; }
+  .controls, .rtop, .card .thumb, footer.site, .back, .planchips { display: none !important; }
   .card, .panel { box-shadow: none; border-color: #ccc; }
   .cols { grid-template-columns: 1fr; gap: 12px; }
   aside.raside { position: static; }

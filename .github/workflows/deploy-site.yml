@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'recipes/**'
+      - 'meal-plans/**'
       - 'tools/build_site.py'
       - '.github/workflows/deploy-site.yml'
   workflow_dispatch:

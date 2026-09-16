@@ -101,6 +101,41 @@
     "file": "crispy-roasted-chickpeas.md"
   },
   {
+    "id": "chicken-adobo",
+    "title": "Filipino Chicken Adobo",
+    "cuisine": "filipino",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 10,
+    "cook_time": 45,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "low-carb",
+      "dairy-free",
+      "budget",
+      "batch-cook",
+      "meal-prep",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~320",
+      "protein_g": "~34",
+      "carbs_g": "~7",
+      "fat_g": "~18"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "chicken-adobo",
+    "file": "chicken-adobo.md"
+  },
+  {
     "id": "black-bean-breakfast-burritos",
     "title": "Freezer Black Bean Breakfast Burritos",
     "cuisine": "mexican",

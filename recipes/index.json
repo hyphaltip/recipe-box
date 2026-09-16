@@ -816,6 +816,39 @@
     "file": "smashed-cucumber-salad.md"
   },
   {
+    "id": "thai-green-curry-chicken",
+    "title": "Thai Green Curry Chicken",
+    "cuisine": "thai",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 20,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "gluten-free",
+      "dairy-free",
+      "one-pan",
+      "quick"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~310",
+      "protein_g": "~30",
+      "carbs_g": "~12",
+      "fat_g": "~17"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "thai-green-curry-chicken",
+    "file": "thai-green-curry-chicken.md"
+  },
+  {
     "id": "tom-kha-gai",
     "title": "Tom Kha Gai (Thai Coconut Chicken Soup)",
     "cuisine": "thai",

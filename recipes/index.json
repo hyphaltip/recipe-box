@@ -546,6 +546,37 @@
     "file": "tzatziki.md"
   },
   {
+    "id": "lemongrass-chicken-noodle-bowls",
+    "title": "Vietnamese Lemongrass Chicken Noodle Bowls",
+    "cuisine": "vietnamese",
+    "category": "lunch",
+    "servings": 4,
+    "prep_time": 25,
+    "cook_time": 15,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~520",
+      "protein_g": "~33",
+      "carbs_g": "~68",
+      "fat_g": "~9"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "lemongrass-chicken-noodle-bowls",
+    "file": "lemongrass-chicken-noodle-bowls.md"
+  },
+  {
     "id": "west-african-peanut-soup",
     "title": "West African Peanut Soup",
     "cuisine": "west-african",

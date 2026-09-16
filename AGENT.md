@@ -110,8 +110,8 @@ Never rewrite published history (`main` only moves forward).
 
 Pushing to `main` with recipe or site changes triggers a GitHub Actions run
 (`.github/workflows/deploy-site.yml`) that rebuilds `site/` and publishes it to
-GitHub Pages at <https://hyphaltip.github.io/recipe-box/>. Nothing extra to do
-after `git push` — but check `gh run list` if the site ever looks stale.
+GitHub Pages at <https://meals.stajich.org/>. Nothing extra to do after
+`git push` — but check `gh run list` if the site ever looks stale.
 
 ## Variety discipline
 
@@ -121,12 +121,14 @@ categories: breakfast, lunch, dinner, sides, and at least one snack or dessert.
 Lean on overlapping base ingredients (onions, garlic, canned beans, grains,
 eggs, canned tomatoes, spice blends) so shopping stays efficient.
 
-## Meal plans (future)
+## Meal plans
 
-Meal plans will live in `meal-plans/` and reference recipes by slug. A plan week
-must: cover 7 days × (breakfast, lunch, dinner), use each dinner's leftovers in a
-following lunch where sensible, include a Sunday prep list, and ship with a
-grocery list grouped by store section.
+Meal plans live in `meal-plans/` and reference recipes by slug with relative
+links (e.g. `[shakshuka](../recipes/shakshuka.md)`). One file per week,
+frontmatter: `id`, `title`, `week_of`, `servings`, `status`, `recipes` (the
+slugs used). A plan week must: cover 7 days × (breakfast, lunch, dinner), use
+each dinner's leftovers in a following lunch where sensible, include a Sunday
+prep list, and ship with a grocery list grouped by store section.
 
 ## Editing rules
 

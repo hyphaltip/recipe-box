@@ -4,7 +4,7 @@ A version-controlled database of healthy, culturally diverse recipes. Recipes ar
 stored as Markdown files with standardized YAML frontmatter — human-readable in
 git, machine-readable for tooling and a future web framework.
 
-**Browse the collection live:** <https://hyphaltip.github.io/recipe-box/>
+**Browse the collection live:** <https://meals.stajich.org/>
 
 ## Repository layout
 
@@ -93,21 +93,14 @@ token (used by `git` over HTTPS) both work — see
 Pushes to `main` that touch `recipes/`, `tools/build_site.py`, or the workflow
 file automatically rebuild and deploy the site via
 [`.github/workflows/deploy-site.yml`](.github/workflows/deploy-site.yml).
-The live site is at <https://hyphaltip.github.io/recipe-box/>.
+The live site is at <https://meals.stajich.org/> (the default
+`hyphaltip.github.io/recipe-box/` URL redirects there; HTTPS is enforced).
 
-### Custom domain (optional)
+### Custom domain
 
-To serve the site at `meals.stajich.org` instead:
-
-1. At the DNS provider for `stajich.org`, add a CNAME record:
-   `meals.stajich.org` → `hyphaltip.github.io`
-2. Re-attach the domain and enforce HTTPS:
-
-```bash
-gh api repos/hyphaltip/recipe-box/pages -X PUT -f cname=meals.stajich.org
-# after the first successful deploy + certificate provisioning:
-gh api repos/hyphaltip/recipe-box/pages -X PUT -f https_enforced=true
-```
+The site serves at `meals.stajich.org` via a CNAME record
+(`meals.stajich.org` → `hyphaltip.github.io`) in the `stajich.org` DNS zone,
+with the domain attached to the repo's Pages settings and HTTPS enforced:
 
 ## Roadmap
 
@@ -116,8 +109,9 @@ gh api repos/hyphaltip/recipe-box/pages -X PUT -f https_enforced=true
 - [x] Generated catalog + JSON index
 - [x] Static website with search/filter ([`tools/build_site.py`](tools/build_site.py) → `site/`)
 - [x] GitHub Pages deployment with auto-deploy on recipe changes
-- [ ] Meal plans that reference recipes by slug
-- [ ] Custom domain (meals.stajich.org) once DNS is configured
+- [x] Custom domain: <https://meals.stajich.org/>
+- [x] Meal plans that reference recipes by slug
+- [ ] Meal-plan pages on the live site
 - [ ] Nutrition estimation for recipes missing it
 
 ## License

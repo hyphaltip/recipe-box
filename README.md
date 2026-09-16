@@ -20,11 +20,13 @@ recipe-box/
 ├── tools/                   # Python 3 CLI tooling (stdlib + PyYAML only)
 │   ├── new_recipe.py        # Scaffold a new recipe file
 │   ├── fetch_recipe.py      # Capture a recipe from a URL or HTML file
+│   ├── import_recipe.py     # Import recipe(s) from structured JSON (agent-to-agent)
 │   ├── validate.py          # Validate every recipe against the standard
 │   ├── catalog.py           # Regenerate recipes/catalog.md + recipes/index.json
 │   └── build_site.py        # Generate the static website into site/
 ├── docs/
-│   └── data-model.md        # Full field reference & controlled vocabularies
+│   ├── data-model.md        # Full field reference & controlled vocabularies
+│   └── import-format.md     # JSON shape accepted by tools/import_recipe.py
 ├── recipes/
 │   ├── catalog.md           # Generated index (by cuisine → category)
 │   ├── index.json           # Generated machine index for the web framework
@@ -43,6 +45,10 @@ python3 tools/new_recipe.py "Sheet-Pan Miso Salmon" --cuisine japanese --categor
 
 # Capture a recipe from the web (extracts schema.org Recipe JSON-LD)
 python3 tools/fetch_recipe.py "https://example.com/some-recipe"
+
+# Import recipe(s) from JSON — e.g. from another agent (see docs/import-format.md)
+python3 tools/import_recipe.py recipe.json
+python3 tools/import_recipe.py --dir incoming/
 
 # Validate the whole database
 python3 tools/validate.py

@@ -44,7 +44,8 @@ select {
 .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 .chip {
   border: 1px solid var(--line); background: var(--card); color: var(--ink);
-  border-radius: 999px; padding: 5px 13px; font-size: 0.88rem; cursor: pointer;
+  border-radius: 999px; padding: 8px 14px; min-height: 36px; display: inline-flex;
+  align-items: center; font-size: 0.88rem; cursor: pointer;
   user-select: none; transition: all 0.12s ease;
 }
 .chip:hover { border-color: var(--accent); }
@@ -78,10 +79,13 @@ select {
 
 /* ---------- recipe page ---------- */
 .rtop { display: flex; justify-content: space-between; align-items: center; padding: 20px 0 0; gap: 10px; }
-.back { font-size: 0.95rem; }
+.back {
+  font-size: 0.95rem; display: inline-flex; align-items: center; min-height: 40px;
+  padding: 4px 2px; margin: -4px -2px;
+}
 button.plain {
   border: 1px solid var(--line); background: var(--card); color: var(--ink);
-  border-radius: 10px; padding: 8px 14px; font-size: 0.9rem; cursor: pointer;
+  border-radius: 10px; padding: 10px 16px; min-height: 40px; font-size: 0.9rem; cursor: pointer;
 }
 button.plain:hover { border-color: var(--accent); color: var(--accent); }
 .rhead { padding: 18px 0 8px; }
@@ -145,6 +149,13 @@ tbody tr:nth-child(odd) td { background: color-mix(in srgb, var(--card) 55%, var
   border-radius: 999px; padding: 4px 12px; font-size: 0.85rem;
 }
 .planchip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+@media (max-width: 480px) {
+  .hero { padding: 28px 0 8px; }
+  .controls { padding: 10px 0 8px; }
+  .chips { margin-top: 8px; }
+  .wrap { padding: 0 16px; }
+}
 
 @media print {
   body { background: #fff; color: #000; font-size: 12pt; }

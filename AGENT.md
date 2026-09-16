@@ -25,6 +25,13 @@ Get the raw recipe by one of these routes:
 - **From text a user pastes**: scaffold with
   `python3 tools/new_recipe.py "<title>" --cuisine <cuisine> --category <category>`
   and paste content into the right sections.
+- **From another agent or script, as JSON**: `python3 tools/import_recipe.py <file.json>`
+  (or `--dir <dir>` for a batch, or `-` for stdin). This is the preferred
+  handoff when a second agent is producing recipes — JSON fields are far less
+  error-prone for an LLM to emit correctly than exact Markdown heading/bullet
+  syntax. See `docs/import-format.md` for the field shape. Imported recipes
+  still land as `status: draft` and need the STANDARDIZE/HEALTH-AUDIT passes
+  below before publishing.
 - **Original creation**: author it directly from the template.
 
 ### 2. STANDARDIZE

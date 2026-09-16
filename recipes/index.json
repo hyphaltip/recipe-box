@@ -137,6 +137,38 @@
     "file": "caribbean-curried-coconut-lentil-sweet-potato-soup.md"
   },
   {
+    "id": "caribbean-jerk-spiced-skillet-chicken-thighs",
+    "title": "Caribbean Jerk-Spiced Skillet Chicken Thighs",
+    "cuisine": "caribbean",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 25,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "gluten-free",
+      "dairy-free",
+      "high-protein"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~340",
+      "protein_g": "~35",
+      "carbs_g": "~8",
+      "fat_g": "~18",
+      "fiber_g": "~1"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "caribbean-jerk-spiced-skillet-chicken-thighs",
+    "file": "caribbean-jerk-spiced-skillet-chicken-thighs.md"
+  },
+  {
     "id": "chana-masala",
     "title": "Chana Masala (Spiced Chickpea Curry)",
     "cuisine": "indian",
@@ -583,6 +615,39 @@
     "file": "mediterranean-lentil-sweet-potato-soup.md"
   },
   {
+    "id": "mediterranean-sheet-pan-chicken-thighs-with-potatoes-olives",
+    "title": "Mediterranean Sheet-Pan Chicken Thighs with Potatoes & Olives",
+    "cuisine": "mediterranean",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 40,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "gluten-free",
+      "dairy-free",
+      "one-pan",
+      "budget"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~480",
+      "protein_g": "~32",
+      "carbs_g": "~26",
+      "fat_g": "~27",
+      "fiber_g": "~3"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "mediterranean-sheet-pan-chicken-thighs-with-potatoes-olives",
+    "file": "mediterranean-sheet-pan-chicken-thighs-with-potatoes-olives.md"
+  },
+  {
     "id": "mexican-chocolate-avocado-mousse",
     "title": "Mexican Chocolate Avocado Mousse",
     "cuisine": "mexican",
@@ -922,6 +987,39 @@
     "updated": "2026-09-15",
     "slug": "pad-krapow-thai-basil-chicken",
     "file": "pad-krapow-thai-basil-chicken.md"
+  },
+  {
+    "id": "pan-seared-chicken-breast-with-lemon-caper-sauce",
+    "title": "Pan-Seared Chicken Breast with Lemon-Caper Sauce",
+    "cuisine": "french",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 20,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "gluten-free",
+      "quick",
+      "one-pan"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~320",
+      "protein_g": "~38",
+      "carbs_g": "~3",
+      "fat_g": "~17",
+      "fiber_g": "~0"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "pan-seared-chicken-breast-with-lemon-caper-sauce",
+    "file": "pan-seared-chicken-breast-with-lemon-caper-sauce.md"
   },
   {
     "id": "peruvian-quinoa-soup",

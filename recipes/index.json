@@ -883,5 +883,41 @@
     "updated": "2026-09-15",
     "slug": "west-african-peanut-soup",
     "file": "west-african-peanut-soup.md"
+  },
+  {
+    "id": "whole-wheat-banana-bread",
+    "title": "Whole Wheat Banana Bread",
+    "cuisine": "american",
+    "category": "quickbread",
+    "servings": 10,
+    "prep_time": 15,
+    "cook_time": 60,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "baking",
+      "whole-grain",
+      "budget",
+      "batch-cook",
+      "kid-friendly",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~210",
+      "protein_g": "~5",
+      "carbs_g": "~28",
+      "fat_g": "~9",
+      "fiber_g": "~3"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "whole-wheat-banana-bread",
+    "file": "whole-wheat-banana-bread.md"
   }
 ]

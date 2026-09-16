@@ -137,6 +137,43 @@
     "file": "chana-masala.md"
   },
   {
+    "id": "cheddar-chive-biscuits",
+    "title": "Cheddar-Chive Whole Wheat Biscuits",
+    "cuisine": "american",
+    "category": "quickbread",
+    "servings": 8,
+    "prep_time": 10,
+    "cook_time": 15,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "baking",
+      "whole-grain",
+      "quick",
+      "budget",
+      "kid-friendly",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~250",
+      "protein_g": "~11",
+      "carbs_g": "~24",
+      "fat_g": "~12",
+      "fiber_g": "~3",
+      "sodium_mg": "~480"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "cheddar-chive-biscuits",
+    "file": "cheddar-chive-biscuits.md"
+  },
+  {
     "id": "crispy-roasted-chickpeas",
     "title": "Crispy Roasted Chickpeas",
     "cuisine": "mediterranean",

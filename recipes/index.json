@@ -67,6 +67,40 @@
     "file": "chana-masala.md"
   },
   {
+    "id": "crispy-roasted-chickpeas",
+    "title": "Crispy Roasted Chickpeas",
+    "cuisine": "mediterranean",
+    "category": "snack",
+    "servings": 4,
+    "prep_time": 5,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "budget",
+      "one-pan"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~230",
+      "protein_g": "~11",
+      "carbs_g": "~30",
+      "fat_g": "~8",
+      "fiber_g": "~8"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "crispy-roasted-chickpeas",
+    "file": "crispy-roasted-chickpeas.md"
+  },
+  {
     "id": "black-bean-breakfast-burritos",
     "title": "Freezer Black Bean Breakfast Burritos",
     "cuisine": "mexican",

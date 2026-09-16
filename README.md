@@ -4,6 +4,8 @@ A version-controlled database of healthy, culturally diverse recipes. Recipes ar
 stored as Markdown files with standardized YAML frontmatter — human-readable in
 git, machine-readable for tooling and a future web framework.
 
+**Browse the collection live:** <https://hyphaltip.github.io/recipe-box/>
+
 ## Repository layout
 
 ```
@@ -86,14 +88,36 @@ After that, every commit syncs with `git push`. SSH keys or a personal access
 token (used by `git` over HTTPS) both work — see
 <https://docs.github.com/en/authentication>.
 
+## Deployment (GitHub Pages)
+
+Pushes to `main` that touch `recipes/`, `tools/build_site.py`, or the workflow
+file automatically rebuild and deploy the site via
+[`.github/workflows/deploy-site.yml`](.github/workflows/deploy-site.yml).
+The live site is at <https://hyphaltip.github.io/recipe-box/>.
+
+### Custom domain (optional)
+
+To serve the site at `meals.stajich.org` instead:
+
+1. At the DNS provider for `stajich.org`, add a CNAME record:
+   `meals.stajich.org` → `hyphaltip.github.io`
+2. Re-attach the domain and enforce HTTPS:
+
+```bash
+gh api repos/hyphaltip/recipe-box/pages -X PUT -f cname=meals.stajich.org
+# after the first successful deploy + certificate provisioning:
+gh api repos/hyphaltip/recipe-box/pages -X PUT -f https_enforced=true
+```
+
 ## Roadmap
 
 - [x] Standardized recipe format + validation
 - [x] Web capture tooling (schema.org JSON-LD extraction)
 - [x] Generated catalog + JSON index
 - [x] Static website with search/filter ([`tools/build_site.py`](tools/build_site.py) → `site/`)
+- [x] GitHub Pages deployment with auto-deploy on recipe changes
 - [ ] Meal plans that reference recipes by slug
-- [ ] GitHub Pages deployment (flip repo public, then publish `site/`)
+- [ ] Custom domain (meals.stajich.org) once DNS is configured
 - [ ] Nutrition estimation for recipes missing it
 
 ## License

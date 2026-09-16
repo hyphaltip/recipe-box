@@ -106,6 +106,13 @@ docs: expand controlled vocabulary
 
 Never rewrite published history (`main` only moves forward).
 
+## Live deployment
+
+Pushing to `main` with recipe or site changes triggers a GitHub Actions run
+(`.github/workflows/deploy-site.yml`) that rebuilds `site/` and publishes it to
+GitHub Pages at <https://hyphaltip.github.io/recipe-box/>. Nothing extra to do
+after `git push` — but check `gh run list` if the site ever looks stale.
+
 ## Variety discipline
 
 When building collections or meal plans, rotate cuisines and categories — aim for

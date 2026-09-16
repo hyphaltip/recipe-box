@@ -82,6 +82,17 @@ python3 tools/catalog.py
 Regenerates `recipes/catalog.md` and `recipes/index.json`. Commit the regenerated
 files together with the recipe.
 
+### 5b. BUILD SITE
+
+```bash
+python3 tools/build_site.py
+```
+
+Regenerates `site/` (index + one page per published recipe). Commit the
+regenerated site alongside the recipe when it should be visible on the web.
+Like the catalog, `site/` is generated — never hand-edit it. Run
+`python3 tools/build_site.py --serve` to preview at http://localhost:8000.
+
 ### 6. COMMIT
 
 Conventional commits, one recipe per commit (plus its catalog update):

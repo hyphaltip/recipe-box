@@ -19,13 +19,18 @@ recipe-box/
 │   ├── new_recipe.py        # Scaffold a new recipe file
 │   ├── fetch_recipe.py      # Capture a recipe from a URL or HTML file
 │   ├── validate.py          # Validate every recipe against the standard
-│   └── catalog.py           # Regenerate recipes/catalog.md + recipes/index.json
+│   ├── catalog.py           # Regenerate recipes/catalog.md + recipes/index.json
+│   └── build_site.py        # Generate the static website into site/
 ├── docs/
 │   └── data-model.md        # Full field reference & controlled vocabularies
-└── recipes/
-    ├── catalog.md           # Generated index (by cuisine → category)
-    ├── index.json           # Generated machine index for the web framework
-    └── <slug>.md            # One file per recipe
+├── recipes/
+│   ├── catalog.md           # Generated index (by cuisine → category)
+│   ├── index.json           # Generated machine index for the web framework
+│   └── <slug>.md            # One file per recipe
+└── site/                    # Generated static website (never hand-edited)
+    ├── index.html           # Searchable, filterable recipe browser
+    ├── recipes/<slug>.html  # One printable page per recipe
+    └── assets/style.css     # Shared stylesheet (light/dark, print styles)
 ```
 
 ## Quickstart
@@ -42,6 +47,12 @@ python3 tools/validate.py
 
 # Regenerate the catalog after adding/editing recipes
 python3 tools/catalog.py
+
+# Build the static website into site/
+python3 tools/build_site.py
+
+# Build and preview it at http://localhost:8000
+python3 tools/build_site.py --serve
 ```
 
 All tools support `--help`.
@@ -80,8 +91,9 @@ token (used by `git` over HTTPS) both work — see
 - [x] Standardized recipe format + validation
 - [x] Web capture tooling (schema.org JSON-LD extraction)
 - [x] Generated catalog + JSON index
+- [x] Static website with search/filter ([`tools/build_site.py`](tools/build_site.py) → `site/`)
 - [ ] Meal plans that reference recipes by slug
-- [ ] Web framework to browse/search/filter recipes
+- [ ] GitHub Pages deployment (flip repo public, then publish `site/`)
 - [ ] Nutrition estimation for recipes missing it
 
 ## License

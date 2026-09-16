@@ -11,7 +11,7 @@ frontmatter field MUST equal the filename stem.
 | `id` | ✅ | string | slug; equals filename stem |
 | `title` | ✅ | string | human-readable |
 | `cuisine` | ✅ | string | controlled vocabulary (below); lowercase-hyphen |
-| `category` | ✅ | enum | `breakfast` `lunch` `dinner` `snack` `dessert` `side` `sauce` `drink` |
+| `category` | ✅ | enum | `breakfast` `lunch` `dinner` `snack` `dessert` `side` `sauce` `drink` `bread` `pie` `cake` `cinnamon-rolls` `quickbread` |
 | `servings` | ✅ | integer | ≥ 1 |
 | `prep_time` | ✅ | integer | minutes, ≥ 0 |
 | `cook_time` | ✅ | integer | minutes, ≥ 0 |
@@ -74,7 +74,7 @@ entries to the vocabulary via a `docs:` commit rather than inventing synonyms.
 `healthy` `vegetarian` `vegan` `gluten-free` `dairy-free` `nut-free`
 `high-protein` `low-carb` `quick` `one-pan` `batch-cook` `budget` `kid-friendly`
 `meal-prep` `no-cook` `comfort-food` `seasonal` `holiday` `grilling` `summer`
-`winter`
+`winter` `baking` `whole-grain`
 
 - `quick` = total time (prep + cook) ≤ 30 minutes
 - `one-pan` = single pan/sheet/trust-pot cooking vessel

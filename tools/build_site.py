@@ -27,7 +27,7 @@ from recipe_lib import REPO_ROOT, load_all_recipes
 SITE_DIR = REPO_ROOT / "site"
 GITHUB_BASE = "https://github.com/hyphaltip/recipe-box"
 
-CATEGORY_ORDER = ["breakfast", "lunch", "dinner", "side", "snack", "dessert", "sauce", "drink"]
+CATEGORY_ORDER = ["breakfast", "lunch", "dinner", "side", "snack", "bread", "quickbread", "pie", "cake", "cinnamon-rolls", "dessert", "sauce", "drink"]
 DIET_TAGS = ["vegan", "vegetarian", "gluten-free", "dairy-free", "high-protein", "quick", "one-pan", "budget"]
 
 

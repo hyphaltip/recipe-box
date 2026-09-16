@@ -24,7 +24,10 @@ TEMPLATE_PATH = REPO_ROOT / "templates" / "recipe-template.md"
 # Controlled vocabularies (mirrors docs/data-model.md)
 # ---------------------------------------------------------------------------
 
-CATEGORIES = ["breakfast", "lunch", "dinner", "snack", "dessert", "side", "sauce", "drink"]
+CATEGORIES = [
+    "breakfast", "lunch", "dinner", "snack", "dessert", "side", "sauce", "drink",
+    "bread", "pie", "cake", "cinnamon-rolls", "quickbread",
+]
 DIFFICULTIES = ["easy", "medium", "hard"]
 STATUSES = ["draft", "published"]
 
@@ -41,7 +44,7 @@ RECOMMENDED_TAGS = [
     "healthy", "vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
     "high-protein", "low-carb", "quick", "one-pan", "batch-cook", "budget",
     "kid-friendly", "meal-prep", "no-cook", "comfort-food", "seasonal", "holiday",
-    "grilling", "summer", "winter",
+    "grilling", "summer", "winter", "baking", "whole-grain",
 ]
 
 NUTRITION_KEYS = ["calories", "protein_g", "carbs_g", "fat_g", "fiber_g", "sodium_mg"]

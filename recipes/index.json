@@ -135,6 +135,41 @@
     "file": "black-bean-breakfast-burritos.md"
   },
   {
+    "id": "golden-milk-turmeric-latte",
+    "title": "Golden Milk (Turmeric Latte)",
+    "cuisine": "indian",
+    "category": "drink",
+    "servings": 2,
+    "prep_time": 5,
+    "cook_time": 5,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "dairy-free",
+      "quick",
+      "winter",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~140",
+      "protein_g": "~3",
+      "carbs_g": "~24",
+      "fat_g": "~4"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "golden-milk-turmeric-latte",
+    "file": "golden-milk-turmeric-latte.md"
+  },
+  {
     "id": "chicken-souvlaki-bowls",
     "title": "Greek Chicken Souvlaki Bowls",
     "cuisine": "greek",

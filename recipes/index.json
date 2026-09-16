@@ -205,6 +205,38 @@
     "file": "chicken-souvlaki-bowls.md"
   },
   {
+    "id": "labneh-breakfast-platter",
+    "title": "Labneh Breakfast Platter",
+    "cuisine": "middle-eastern",
+    "category": "breakfast",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 0,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "budget",
+      "no-cook",
+      "quick"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~270",
+      "protein_g": "~11",
+      "carbs_g": "~24",
+      "fat_g": "~14"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "labneh-breakfast-platter",
+    "file": "labneh-breakfast-platter.md"
+  },
+  {
     "id": "mexican-chocolate-avocado-mousse",
     "title": "Mexican Chocolate Avocado Mousse",
     "cuisine": "mexican",

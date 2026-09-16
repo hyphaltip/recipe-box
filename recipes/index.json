@@ -273,6 +273,41 @@
     "file": "mexican-chocolate-avocado-mousse.md"
   },
   {
+    "id": "misir-wot-ethiopian-red-lentils",
+    "title": "Misir Wot (Ethiopian Red Lentils)",
+    "cuisine": "ethiopian",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 10,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "budget",
+      "batch-cook",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~280",
+      "protein_g": "~15",
+      "carbs_g": "~42",
+      "fat_g": "~6",
+      "fiber_g": "~12"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "misir-wot-ethiopian-red-lentils",
+    "file": "misir-wot-ethiopian-red-lentils.md"
+  },
+  {
     "id": "moroccan-chickpea-stew",
     "title": "Moroccan Chickpea & Sweet Potato Stew",
     "cuisine": "moroccan",

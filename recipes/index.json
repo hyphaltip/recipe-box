@@ -240,6 +240,38 @@
     "file": "chicken-souvlaki-bowls.md"
   },
   {
+    "id": "kung-pao-chicken",
+    "title": "Kung Pao Chicken",
+    "cuisine": "chinese",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 10,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "quick",
+      "one-pan",
+      "dairy-free"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~330",
+      "protein_g": "~30",
+      "carbs_g": "~15",
+      "fat_g": "~16"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "kung-pao-chicken",
+    "file": "kung-pao-chicken.md"
+  },
+  {
     "id": "labneh-breakfast-platter",
     "title": "Labneh Breakfast Platter",
     "cuisine": "middle-eastern",

@@ -443,6 +443,41 @@
     "file": "pad-krapow-thai-basil-chicken.md"
   },
   {
+    "id": "peruvian-quinoa-soup",
+    "title": "Peruvian Quinoa Soup (Sopa de Quinua)",
+    "cuisine": "peruvian",
+    "category": "lunch",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "budget",
+      "batch-cook",
+      "winter"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~240",
+      "protein_g": "~9",
+      "carbs_g": "~36",
+      "fat_g": "~6",
+      "fiber_g": "~8"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "peruvian-quinoa-soup",
+    "file": "peruvian-quinoa-soup.md"
+  },
+  {
     "id": "shakshuka",
     "title": "Shakshuka (Eggs Poached in Spiced Tomato Sauce)",
     "cuisine": "middle-eastern",

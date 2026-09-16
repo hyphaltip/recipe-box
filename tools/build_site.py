@@ -27,6 +27,7 @@ from recipe_lib import REPO_ROOT, load_all_recipes, load_recipe
 
 SITE_DIR = REPO_ROOT / "site"
 MEAL_PLANS_DIR = REPO_ROOT / "meal-plans"
+IMAGES_DIR = REPO_ROOT / "images"
 GITHUB_BASE = "https://github.com/hyphaltip/recipe-box"
 
 CATEGORY_ORDER = ["breakfast", "lunch", "dinner", "side", "snack", "bread", "quickbread", "pie", "cake", "cinnamon-rolls", "dessert", "sauce", "drink"]
@@ -265,6 +266,8 @@ button.plain:hover { border-color: var(--accent); color: var(--accent); }
 .rhead { padding: 18px 0 8px; }
 .rhead h1 { margin: 10px 0 10px; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.15; }
 .rhead .hook { color: var(--muted); font-size: 1.08rem; font-style: italic; margin: 0 0 14px; max-width: 62ch; }
+.rphoto { margin: 12px 0; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+.rphoto img { width: 100%; max-height: 360px; object-fit: cover; display: block; }
 .rmeta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.92rem; color: var(--muted); }
 .rmeta b { color: var(--ink); }
 .cols { display: grid; grid-template-columns: 330px 1fr; gap: 34px; align-items: start; padding-bottom: 60px; }
@@ -370,6 +373,23 @@ def total_minutes(meta: dict) -> int:
     return int(meta.get("prep_time") or 0) + int(meta.get("cook_time") or 0)
 
 
+def image_src(image: str, *, from_subdir: bool) -> str:
+    """Resolve a recipe's `image` field to a usable <img src>.
+
+    Accepts an absolute http(s) URL (external, hotlinked as-is) or a local
+    `images/<file>` path (a photo we own, copied into site/assets/images/
+    at build time — see build()).
+    """
+    if not image:
+        return ""
+    if image.startswith(("http://", "https://")):
+        return image
+    if image.startswith("images/"):
+        rel = "assets/" + image
+        return ("../" + rel) if from_subdir else rel
+    return ""
+
+
 def recipe_page(recipe: dict) -> str:
     meta, body = recipe["meta"], recipe["body"]
     parsed = parse_body(body)
@@ -403,6 +423,12 @@ def recipe_page(recipe: dict) -> str:
 
     github_link = f'<a href="{GITHUB_BASE}/blob/main/recipes/{esc(slug)}.md" rel="noopener">view source on GitHub</a>'
 
+    photo_src = image_src(meta.get("image", ""), from_subdir=True)
+    photo_html = (
+        f'<div class="rphoto"><img src="{esc(photo_src)}" alt="{title}" loading="lazy"></div>'
+        if photo_src else ""
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -423,6 +449,7 @@ def recipe_page(recipe: dict) -> str:
       <span class="pill">{esc(meta.get('category', ''))}</span>
     </div>
     <h1>{title}</h1>
+    {photo_html}
     <p class="hook">{inline_md(parsed['hook'])}</p>
     <div class="rmeta">{''.join(meta_bits)}</div>
   </header>
@@ -462,7 +489,7 @@ def card_data(recipes: list[dict]) -> list[dict]:
             "total": total_minutes(meta),
             "difficulty": meta.get("difficulty", "easy"),
             "tags": meta.get("tags", []),
-            "image": meta.get("image", ""),
+            "image": image_src(meta.get("image", ""), from_subdir=False),
             "hook": parsed["hook"],
             "ingredients": ingredients,
             "created": str(meta.get("created", "")),
@@ -763,6 +790,19 @@ def build() -> list[dict]:
     # Remove stale recipe pages (deleted recipes shouldn't linger)
     for old in pages_dir.glob("*.html"):
         old.unlink()
+
+    # Locally-hosted photos (images/<file>) -> site/assets/images/
+    images_out = assets / "images"
+    shutil.rmtree(images_out, ignore_errors=True)
+    if IMAGES_DIR.is_dir():
+        image_files = [
+            p for p in IMAGES_DIR.glob("*")
+            if p.is_file() and p.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
+        ]
+        if image_files:
+            images_out.mkdir(parents=True, exist_ok=True)
+            for src in image_files:
+                shutil.copy2(src, images_out / src.name)
 
     for recipe in published:
         (pages_dir / f"{recipe['slug']}.html").write_text(recipe_page(recipe), encoding="utf-8")

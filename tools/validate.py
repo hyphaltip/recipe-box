@@ -21,6 +21,7 @@ from recipe_lib import (
     DIFFICULTIES,
     NUTRITION_KEYS,
     RECOMMENDED_TAGS,
+    REPO_ROOT,
     REQUIRED_FIELDS,
     STATUSES,
     is_iso_date,
@@ -31,6 +32,7 @@ from recipe_lib import (
 
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 URL_RE = re.compile(r"^https?://\S+$")
+LOCAL_IMAGE_RE = re.compile(r"^images/[a-z0-9]+(-[a-z0-9]+)*\.(jpg|jpeg|png|webp)$")
 STEP_RE = re.compile(r"^\d+[.)]\s+\S", re.MULTILINE)
 H1_RE = re.compile(r"^#\s+(.*)$", re.MULTILINE)
 
@@ -128,8 +130,18 @@ def validate_one(recipe: dict) -> tuple[list[str], list[str]]:
 
     # --- image -------------------------------------------------------------------
     image = meta.get("image")
-    if image not in (None, "") and not URL_RE.match(str(image)):
-        err(f"image is not a valid URL: {image!r}")
+    if image not in (None, ""):
+        image = str(image)
+        if URL_RE.match(image):
+            pass
+        elif LOCAL_IMAGE_RE.match(image):
+            if not (REPO_ROOT / image).is_file():
+                err(f"image file not found: {image} (place it at repo root under images/)")
+        else:
+            err(
+                f"image must be an http(s) URL or a local 'images/<slug>.<ext>' "
+                f"path (jpg/jpeg/png/webp), got {image!r}"
+            )
 
     # --- nutrition -----------------------------------------------------------------
     nutrition = meta.get("nutrition")

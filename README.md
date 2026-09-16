@@ -31,10 +31,13 @@ recipe-box/
 │   ├── catalog.md           # Generated index (by cuisine → category)
 │   ├── index.json           # Generated machine index for the web framework
 │   └── <slug>.md            # One file per recipe
+├── images/                  # Locally-hosted photos we own (see below)
+│   └── <slug>.<ext>         # One optional photo per recipe (jpg/jpeg/png/webp)
 └── site/                    # Generated static website (never hand-edited)
     ├── index.html           # Searchable, filterable recipe browser
     ├── recipes/<slug>.html  # One printable page per recipe
     └── assets/style.css     # Shared stylesheet (light/dark, print styles)
+    └── assets/images/       # Copy of images/ (generated at build time)
 ```
 
 ## Quickstart
@@ -72,6 +75,15 @@ Machine data lives in YAML frontmatter; the body follows a fixed section order:
 Description → Ingredients → Instructions → Notes & Substitutions →
 Storage & Make-Ahead. See [`templates/recipe-template.md`](templates/recipe-template.md)
 and [`docs/data-model.md`](docs/data-model.md).
+
+## Images
+
+A recipe's optional `image` field is either an `http(s)` URL (a recipe
+adapted from another site — hotlinked, since the photo belongs to that
+site) or a local `images/<slug>.<ext>` path for a photo we actually own
+(an original creation, or one we took ourselves), committed to the repo and
+copied into `site/assets/images/` at build time. See
+[`docs/data-model.md`](docs/data-model.md) for the full convention.
 
 ## The agent workflow
 

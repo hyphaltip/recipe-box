@@ -35,7 +35,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-name", default="Original creation")
     parser.add_argument("--source-url", default="")
     parser.add_argument("--source-author", default="")
-    parser.add_argument("--image", default="", help="photo URL (optional)")
+    parser.add_argument(
+        "--image", default="",
+        help="photo: an http(s) URL, or a local images/<slug>.<ext> path for a photo you own (optional)",
+    )
     parser.add_argument("--status", default="draft", choices=["draft", "published"])
     parser.add_argument("--force", action="store_true", help="overwrite existing file")
     parser.add_argument("--stdout", action="store_true", help="print to stdout instead of writing")

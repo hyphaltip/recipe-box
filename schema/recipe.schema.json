@@ -70,6 +70,9 @@
     },
     "created": { "type": "string", "format": "date" },
     "updated": { "type": "string", "format": "date" },
-    "image": { "type": "string", "format": "uri", "description": "Photo URL for the web UI" }
+    "image": {
+      "type": "string",
+      "description": "Either an http(s) URL (external, hotlinked from the source site) or a local 'images/<slug>.<ext>' path (jpg/jpeg/png/webp) for a photo we own"
+    }
   }
 }

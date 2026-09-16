@@ -22,10 +22,16 @@ frontmatter field MUST equal the filename stem.
 | `nutrition` | — | map | per serving: `calories`, `protein_g`, `carbs_g`, `fat_g`, `fiber_g`, `sodium_mg` (numbers; prefix estimates with `~` as a string, e.g. `calories: "~420"`) |
 | `created` | ✅ | date | ISO `YYYY-MM-DD` |
 | `updated` | ✅ | date | ISO; ≥ `created` |
-| `image` | — | string | URL of a representative photo |
+| `image` | — | string | http(s) URL, or a local `images/<slug>.<ext>` path |
 
-> The optional `image` field holds a photo URL for the future web UI. Recipes may
-> also embed images in the body via standard Markdown syntax.  
+> The optional `image` field holds a representative photo, rendered on the
+> index card and recipe page. It's either an `http(s)` URL — used for
+> recipes adapted from another site, hotlinked rather than re-hosted, since
+> the photo belongs to that site — or a local `images/<slug>.<ext>` path
+> (jpg/jpeg/png/webp) for a photo we actually own (an original creation, or
+> one you took yourself), committed to the repo under the top-level
+> `images/` directory and copied into `site/assets/images/` at build time.
+> Recipes may also embed images in the body via standard Markdown syntax.
 
 ## Body structure (fixed section order)
 

@@ -54,6 +54,13 @@ Transform the draft into the standard format (see `docs/data-model.md`):
   near-duplicates; `quick` means total time ≤ 30 min.
 - **Source**: ALWAYS fill `source.name` and `source.url` for anything adapted.
   Set `source.license: CC-BY-4.0` only for recipes authored for this repo.
+- **Image**: for a recipe adapted from another site, set `image` to that
+  site's photo URL if `fetch_recipe.py` captured one — hotlink it, don't
+  download it; the photo belongs to that site, unlike the (reworded) text.
+  For an original-creation recipe, only set `image` to a local
+  `images/<slug>.<ext>` path if you actually have a photo you own for it
+  (jpg/jpeg/png/webp, committed under the repo's `images/` directory) —
+  leave the field unset rather than invent or source a stand-in photo.
 
 **Attribution rule**: adapt, don't copy. Reorganize, reword, and standardize
 captured recipes; keep the source link. Never paste a recipe's prose verbatim.

@@ -677,6 +677,42 @@
     "file": "peruvian-quinoa-soup.md"
   },
   {
+    "id": "rosemary-focaccia",
+    "title": "Rosemary Focaccia",
+    "cuisine": "italian",
+    "category": "bread",
+    "servings": 12,
+    "prep_time": 15,
+    "cook_time": 25,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "baking",
+      "budget",
+      "one-pan",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~180",
+      "protein_g": "~5",
+      "carbs_g": "~27",
+      "fat_g": "~6",
+      "fiber_g": "~2",
+      "sodium_mg": "~320"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "rosemary-focaccia",
+    "file": "rosemary-focaccia.md"
+  },
+  {
     "id": "shakshuka",
     "title": "Shakshuka (Eggs Poached in Spiced Tomato Sauce)",
     "cuisine": "middle-eastern",

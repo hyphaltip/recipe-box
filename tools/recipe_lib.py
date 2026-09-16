@@ -34,7 +34,7 @@ CUISINES = [
     "italian", "japanese", "korean", "lebanese", "mediterranean", "mexican",
     "middle-eastern", "moroccan", "nigerian", "peruvian", "polish", "russian",
     "scandinavian", "senegalese", "spanish", "thai", "turkish", "vietnamese",
-    "fusion", "other",
+    "west-african", "fusion", "other",
 ]
 
 RECOMMENDED_TAGS = [

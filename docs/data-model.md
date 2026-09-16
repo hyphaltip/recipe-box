@@ -65,7 +65,7 @@ frontmatter field MUST equal the filename stem.
 `italian` `japanese` `korean` `lebanese` `mediterranean` `mexican`
 `middle-eastern` `moroccan`
 `nigerian` `peruvian` `polish` `russian` `scandinavian` `senegalese`
-`spanish` `thai` `turkish` `vietnamese` `fusion` `other`
+`spanish` `thai` `turkish` `vietnamese` `west-african` `fusion` `other`
 Unknown cuisines produce a validation **warning** (not an error) — propose new
 entries to the vocabulary via a `docs:` commit rather than inventing synonyms.
 

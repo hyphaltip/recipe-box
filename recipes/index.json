@@ -545,6 +545,38 @@
     "file": "no-knead-whole-wheat-bread.md"
   },
   {
+    "id": "olive-oil-citrus-cake",
+    "title": "Olive Oil Citrus Cake",
+    "cuisine": "mediterranean",
+    "category": "cake",
+    "servings": 12,
+    "prep_time": 15,
+    "cook_time": 40,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "baking",
+      "kid-friendly",
+      "seasonal"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~250",
+      "protein_g": "~5",
+      "carbs_g": "~32",
+      "fat_g": "~11"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "olive-oil-citrus-cake",
+    "file": "olive-oil-citrus-cake.md"
+  },
+  {
     "id": "overnight-cinnamon-rolls",
     "title": "Overnight Cinnamon Rolls",
     "cuisine": "american",

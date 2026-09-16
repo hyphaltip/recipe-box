@@ -1,5 +1,40 @@
 [
   {
+    "id": "berry-yogurt-snack-cake",
+    "title": "Berry Yogurt Snack Cake",
+    "cuisine": "american",
+    "category": "cake",
+    "servings": 12,
+    "prep_time": 15,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "baking",
+      "whole-grain",
+      "budget",
+      "kid-friendly"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~165",
+      "protein_g": "~5",
+      "carbs_g": "~25",
+      "fat_g": "~6",
+      "fiber_g": "~3",
+      "sodium_mg": "~180"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "berry-yogurt-snack-cake",
+    "file": "berry-yogurt-snack-cake.md"
+  },
+  {
     "id": "irish-soda-bread",
     "title": "Brown Irish Soda Bread",
     "cuisine": "irish",

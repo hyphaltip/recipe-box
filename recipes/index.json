@@ -545,6 +545,39 @@
     "file": "no-knead-whole-wheat-bread.md"
   },
   {
+    "id": "overnight-cinnamon-rolls",
+    "title": "Overnight Cinnamon Rolls",
+    "cuisine": "american",
+    "category": "cinnamon-rolls",
+    "servings": 12,
+    "prep_time": 30,
+    "cook_time": 25,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "baking",
+      "comfort-food",
+      "kid-friendly",
+      "batch-cook"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~290",
+      "protein_g": "~6",
+      "carbs_g": "~45",
+      "fat_g": "~9"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "overnight-cinnamon-rolls",
+    "file": "overnight-cinnamon-rolls.md"
+  },
+  {
     "id": "pad-krapow-thai-basil-chicken",
     "title": "Pad Krapow (Thai Basil Chicken)",
     "cuisine": "thai",

@@ -1017,6 +1017,43 @@
     "file": "lemongrass-chicken-noodle-bowls.md"
   },
   {
+    "id": "chicken-pot-pie",
+    "title": "Weeknight Chicken Pot Pie with Whole Wheat Biscuit Top",
+    "cuisine": "american",
+    "category": "pie",
+    "servings": 6,
+    "prep_time": 25,
+    "cook_time": 35,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "comfort-food",
+      "kid-friendly",
+      "baking",
+      "whole-grain",
+      "one-pan",
+      "batch-cook"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~430",
+      "protein_g": "~34",
+      "carbs_g": "~38",
+      "fat_g": "~17",
+      "fiber_g": "~4",
+      "sodium_mg": "~620"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "chicken-pot-pie",
+    "file": "chicken-pot-pie.md"
+  },
+  {
     "id": "west-african-peanut-soup",
     "title": "West African Peanut Soup",
     "cuisine": "west-african",

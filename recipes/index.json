@@ -339,5 +339,38 @@
     "updated": "2026-09-15",
     "slug": "tuscan-white-bean-kale-soup",
     "file": "tuscan-white-bean-kale-soup.md"
+  },
+  {
+    "id": "tzatziki",
+    "title": "Tzatziki (Greek Yogurt-Cucumber Sauce)",
+    "cuisine": "greek",
+    "category": "sauce",
+    "servings": 8,
+    "prep_time": 15,
+    "cook_time": 0,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "gluten-free",
+      "budget",
+      "no-cook",
+      "quick"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~70",
+      "protein_g": "~4",
+      "carbs_g": "~4",
+      "fat_g": "~5"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "tzatziki",
+    "file": "tzatziki.md"
   }
 ]

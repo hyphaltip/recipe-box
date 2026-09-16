@@ -170,6 +170,42 @@
     "file": "chicken-souvlaki-bowls.md"
   },
   {
+    "id": "mexican-chocolate-avocado-mousse",
+    "title": "Mexican Chocolate Avocado Mousse",
+    "cuisine": "mexican",
+    "category": "dessert",
+    "servings": 6,
+    "prep_time": 10,
+    "cook_time": 0,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "dairy-free",
+      "no-cook",
+      "quick",
+      "kid-friendly"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~210",
+      "protein_g": "~3",
+      "carbs_g": "~24",
+      "fat_g": "~13",
+      "fiber_g": "~7"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "mexican-chocolate-avocado-mousse",
+    "file": "mexican-chocolate-avocado-mousse.md"
+  },
+  {
     "id": "moroccan-chickpea-stew",
     "title": "Moroccan Chickpea & Sweet Potato Stew",
     "cuisine": "moroccan",

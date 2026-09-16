@@ -443,6 +443,42 @@
     "file": "nasi-goreng.md"
   },
   {
+    "id": "no-knead-whole-wheat-bread",
+    "title": "No-Knead Whole Wheat Dutch Oven Bread",
+    "cuisine": "american",
+    "category": "bread",
+    "servings": 12,
+    "prep_time": 20,
+    "cook_time": 45,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "baking",
+      "whole-grain",
+      "budget",
+      "batch-cook",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~140",
+      "protein_g": "~6",
+      "carbs_g": "~27",
+      "fat_g": "~1",
+      "fiber_g": "~4"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "no-knead-whole-wheat-bread",
+    "file": "no-knead-whole-wheat-bread.md"
+  },
+  {
     "id": "pad-krapow-thai-basil-chicken",
     "title": "Pad Krapow (Thai Basil Chicken)",
     "cuisine": "thai",

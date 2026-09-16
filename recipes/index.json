@@ -137,6 +137,41 @@
     "file": "caribbean-curried-coconut-lentil-sweet-potato-soup.md"
   },
   {
+    "id": "chana-masala-2",
+    "title": "Chana Masala",
+    "cuisine": "indian",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 25,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "dairy-free",
+      "budget",
+      "healthy",
+      "comfort-food",
+      "batch-cook",
+      "meal-prep"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 300,
+      "protein_g": 12,
+      "carbs_g": 41,
+      "fat_g": 10
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "chana-masala-2",
+    "file": "chana-masala-2.md"
+  },
+  {
     "id": "chana-masala",
     "title": "Chana Masala (Spiced Chickpea Curry)",
     "cuisine": "indian",
@@ -1031,6 +1066,41 @@
     "file": "sheet-pan-miso-salmon.md"
   },
   {
+    "id": "simple-lentil-soup",
+    "title": "Simple Lentil Soup",
+    "cuisine": "mediterranean",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 30,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "dairy-free",
+      "budget",
+      "comfort-food",
+      "batch-cook",
+      "one-pan"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured from web"
+    },
+    "nutrition": {
+      "calories": 170,
+      "protein_g": 12,
+      "carbs_g": 29,
+      "fat_g": 0.5
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "simple-lentil-soup",
+    "file": "simple-lentil-soup.md"
+  },
+  {
     "id": "skillet-apple-pie",
     "title": "Skillet Apple Pie with Whole Wheat Crust",
     "cuisine": "american",
@@ -1271,6 +1341,69 @@
     "updated": "2026-09-15",
     "slug": "tzatziki",
     "file": "tzatziki.md"
+  },
+  {
+    "id": "vanilla-ice-cream-2",
+    "title": "Vanilla Ice Cream",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 6,
+    "prep_time": 10,
+    "cook_time": 25,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "gluten-free",
+      "nut-free",
+      "comfort-food",
+      "summer",
+      "kid-friendly"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 290,
+      "protein_g": 4,
+      "carbs_g": 30,
+      "fat_g": 18
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "vanilla-ice-cream-2",
+    "file": "vanilla-ice-cream-2.md"
+  },
+  {
+    "id": "vanilla-ice-cream",
+    "title": "Vanilla Ice Cream",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 6,
+    "prep_time": 20,
+    "cook_time": 10,
+    "difficulty": "medium",
+    "tags": [
+      "vegetarian",
+      "gluten-free",
+      "nut-free",
+      "summer",
+      "kid-friendly"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 430,
+      "protein_g": 6,
+      "carbs_g": 30,
+      "fat_g": 35
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "vanilla-ice-cream",
+    "file": "vanilla-ice-cream.md"
   },
   {
     "id": "lemongrass-chicken-noodle-bowls",

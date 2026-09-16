@@ -14,3 +14,6 @@ Thumbs.db
 
 # Scratch
 *.tmp
+
+# Recipe drafts in progress (never committed; published drafts move to recipes/)
+.staging/

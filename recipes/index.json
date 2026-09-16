@@ -101,6 +101,42 @@
     "file": "crispy-roasted-chickpeas.md"
   },
   {
+    "id": "everyday-sourdough-boule",
+    "title": "Everyday Sourdough Boule",
+    "cuisine": "american",
+    "category": "bread",
+    "servings": 12,
+    "prep_time": 30,
+    "cook_time": 45,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "baking",
+      "whole-grain",
+      "budget",
+      "batch-cook"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~150",
+      "protein_g": "~6",
+      "carbs_g": "~30",
+      "fat_g": "~1",
+      "fiber_g": "~3",
+      "sodium_mg": "~200"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "everyday-sourdough-boule",
+    "file": "everyday-sourdough-boule.md"
+  },
+  {
     "id": "chicken-adobo",
     "title": "Filipino Chicken Adobo",
     "cuisine": "filipino",

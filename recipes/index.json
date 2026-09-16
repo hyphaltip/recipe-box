@@ -304,6 +304,40 @@
     "file": "labneh-breakfast-platter.md"
   },
   {
+    "id": "mapo-tofu",
+    "title": "Mapo Tofu (麻婆豆腐)",
+    "cuisine": "chinese",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 15,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "budget",
+      "quick",
+      "one-pan",
+      "dairy-free",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~280",
+      "protein_g": "~20",
+      "carbs_g": "~10",
+      "fat_g": "~17"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "mapo-tofu",
+    "file": "mapo-tofu.md"
+  },
+  {
     "id": "mexican-chocolate-avocado-mousse",
     "title": "Mexican Chocolate Avocado Mousse",
     "cuisine": "mexican",

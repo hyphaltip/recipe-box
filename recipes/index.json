@@ -681,6 +681,40 @@
     "file": "skillet-apple-pie.md"
   },
   {
+    "id": "tom-kha-gai",
+    "title": "Tom Kha Gai (Thai Coconut Chicken Soup)",
+    "cuisine": "thai",
+    "category": "lunch",
+    "servings": 4,
+    "prep_time": 10,
+    "cook_time": 20,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "gluten-free",
+      "dairy-free",
+      "quick",
+      "one-pan",
+      "winter"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~290",
+      "protein_g": "~28",
+      "carbs_g": "~12",
+      "fat_g": "~16"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "tom-kha-gai",
+    "file": "tom-kha-gai.md"
+  },
+  {
     "id": "turkey-and-bean-chili",
     "title": "Turkey and White Bean Chili with Dried Chiles",
     "cuisine": "american",

@@ -69,6 +69,38 @@
     "file": "chicken-souvlaki-bowls.md"
   },
   {
+    "id": "pad-krapow-thai-basil-chicken",
+    "title": "Pad Krapow (Thai Basil Chicken)",
+    "cuisine": "thai",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 10,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "quick",
+      "one-pan",
+      "dairy-free"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~440",
+      "protein_g": "~33",
+      "carbs_g": "~45",
+      "fat_g": "~16"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "pad-krapow-thai-basil-chicken",
+    "file": "pad-krapow-thai-basil-chicken.md"
+  },
+  {
     "id": "shakshuka",
     "title": "Shakshuka (Eggs Poached in Spiced Tomato Sauce)",
     "cuisine": "middle-eastern",

@@ -102,6 +102,41 @@
     "file": "bulgogi-beef-bowls.md"
   },
   {
+    "id": "caribbean-curried-coconut-lentil-sweet-potato-soup",
+    "title": "Caribbean Curried Coconut Lentil & Sweet Potato Soup",
+    "cuisine": "caribbean",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "dairy-free",
+      "high-protein",
+      "one-pan"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~340",
+      "protein_g": "~11",
+      "carbs_g": "~38",
+      "fat_g": "~15",
+      "fiber_g": "~9"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "caribbean-curried-coconut-lentil-sweet-potato-soup",
+    "file": "caribbean-curried-coconut-lentil-sweet-potato-soup.md"
+  },
+  {
     "id": "chana-masala",
     "title": "Chana Masala (Spiced Chickpea Curry)",
     "cuisine": "indian",
@@ -481,6 +516,42 @@
     "file": "mapo-tofu.md"
   },
   {
+    "id": "mediterranean-lentil-sweet-potato-soup",
+    "title": "Mediterranean Lentil & Sweet Potato Soup",
+    "cuisine": "mediterranean",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "dairy-free",
+      "one-pan",
+      "budget",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~260",
+      "protein_g": "~12",
+      "carbs_g": "~40",
+      "fat_g": "~7",
+      "fiber_g": "~10"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "mediterranean-lentil-sweet-potato-soup",
+    "file": "mediterranean-lentil-sweet-potato-soup.md"
+  },
+  {
     "id": "mexican-chocolate-avocado-mousse",
     "title": "Mexican Chocolate Avocado Mousse",
     "cuisine": "mexican",
@@ -618,6 +689,43 @@
     "updated": "2026-09-15",
     "slug": "moroccan-chickpea-stew",
     "file": "moroccan-chickpea-stew.md"
+  },
+  {
+    "id": "moroccan-spiced-red-lentil-sweet-potato-soup",
+    "title": "Moroccan-Spiced Red Lentil & Sweet Potato Soup",
+    "cuisine": "moroccan",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 30,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "dairy-free",
+      "budget",
+      "one-pan",
+      "batch-cook",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~280",
+      "protein_g": "~13",
+      "carbs_g": "~42",
+      "fat_g": "~7",
+      "fiber_g": "~10"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "moroccan-spiced-red-lentil-sweet-potato-soup",
+    "file": "moroccan-spiced-red-lentil-sweet-potato-soup.md"
   },
   {
     "id": "nasi-goreng",

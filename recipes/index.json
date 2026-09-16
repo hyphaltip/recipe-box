@@ -1,5 +1,39 @@
 [
   {
+    "id": "black-bean-breakfast-burritos",
+    "title": "Freezer Black Bean Breakfast Burritos",
+    "cuisine": "mexican",
+    "category": "breakfast",
+    "servings": 6,
+    "prep_time": 20,
+    "cook_time": 15,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "budget",
+      "batch-cook",
+      "meal-prep",
+      "kid-friendly"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~380",
+      "protein_g": "~19",
+      "carbs_g": "~40",
+      "fat_g": "~15",
+      "fiber_g": "~9"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "black-bean-breakfast-burritos",
+    "file": "black-bean-breakfast-burritos.md"
+  },
+  {
     "id": "shakshuka",
     "title": "Shakshuka (Eggs Poached in Spiced Tomato Sauce)",
     "cuisine": "middle-eastern",

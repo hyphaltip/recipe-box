@@ -645,6 +645,42 @@
     "file": "sheet-pan-miso-salmon.md"
   },
   {
+    "id": "skillet-apple-pie",
+    "title": "Skillet Apple Pie with Whole Wheat Crust",
+    "cuisine": "american",
+    "category": "pie",
+    "servings": 8,
+    "prep_time": 30,
+    "cook_time": 50,
+    "difficulty": "medium",
+    "tags": [
+      "healthy",
+      "vegetarian",
+      "baking",
+      "whole-grain",
+      "comfort-food",
+      "kid-friendly",
+      "budget",
+      "seasonal"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~300",
+      "protein_g": "~3",
+      "carbs_g": "~45",
+      "fat_g": "~12",
+      "fiber_g": "~5"
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "skillet-apple-pie",
+    "file": "skillet-apple-pie.md"
+  },
+  {
     "id": "turkey-and-bean-chili",
     "title": "Turkey and White Bean Chili with Dried Chiles",
     "cuisine": "american",

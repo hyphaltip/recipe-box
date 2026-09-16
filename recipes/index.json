@@ -34,6 +34,41 @@
     "file": "black-bean-breakfast-burritos.md"
   },
   {
+    "id": "chicken-souvlaki-bowls",
+    "title": "Greek Chicken Souvlaki Bowls",
+    "cuisine": "greek",
+    "category": "dinner",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 15,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "high-protein",
+      "gluten-free",
+      "dairy-free",
+      "quick",
+      "meal-prep",
+      "grilling",
+      "summer"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~490",
+      "protein_g": "~38",
+      "carbs_g": "~42",
+      "fat_g": "~18"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "chicken-souvlaki-bowls",
+    "file": "chicken-souvlaki-bowls.md"
+  },
+  {
     "id": "shakshuka",
     "title": "Shakshuka (Eggs Poached in Spiced Tomato Sauce)",
     "cuisine": "middle-eastern",

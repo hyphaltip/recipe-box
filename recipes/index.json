@@ -32,6 +32,41 @@
     "file": "bulgogi-beef-bowls.md"
   },
   {
+    "id": "chana-masala",
+    "title": "Chana Masala (Spiced Chickpea Curry)",
+    "cuisine": "indian",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 35,
+    "difficulty": "easy",
+    "tags": [
+      "healthy",
+      "vegan",
+      "vegetarian",
+      "gluten-free",
+      "budget",
+      "batch-cook",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original creation",
+      "license": "CC-BY-4.0"
+    },
+    "nutrition": {
+      "calories": "~260",
+      "protein_g": "~12",
+      "carbs_g": "~36",
+      "fat_g": "~8",
+      "fiber_g": "~10"
+    },
+    "created": "2026-09-15",
+    "updated": "2026-09-15",
+    "slug": "chana-masala",
+    "file": "chana-masala.md"
+  },
+  {
     "id": "black-bean-breakfast-burritos",
     "title": "Freezer Black Bean Breakfast Burritos",
     "cuisine": "mexican",

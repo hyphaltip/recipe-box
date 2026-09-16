@@ -34,7 +34,7 @@ STATUSES = ["draft", "published"]
 CUISINES = [
     "afghan", "african", "american", "brazilian", "british", "caribbean", "chinese",
     "ethiopian", "filipino", "french", "german", "greek", "indian", "indonesian",
-    "italian", "japanese", "korean", "lebanese", "mediterranean", "mexican",
+    "irish", "italian", "japanese", "korean", "lebanese", "mediterranean", "mexican",
     "middle-eastern", "moroccan", "nigerian", "peruvian", "polish", "russian",
     "scandinavian", "senegalese", "spanish", "thai", "turkish", "vietnamese",
     "west-african", "fusion", "other",

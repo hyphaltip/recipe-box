@@ -38,13 +38,69 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
-from recipe_lib import RECIPES_DIR, render_markdown, slugify, today
+from recipe_lib import RECIPES_DIR, load_all_recipes, render_markdown, slugify, today
 from validate import validate_one
 
 REQUIRED_LIST_FIELDS = ["ingredients", "instructions"]
+
+
+# ---------------------------------------------------------------------------
+# Duplicate detection
+# ---------------------------------------------------------------------------
+
+
+def normalize_title(title: str) -> str:
+    """Collapse a title to a comparable key (lowercase, strip punctuation)."""
+    return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+
+
+def build_existing_index() -> tuple[dict[str, set], dict[str, set]]:
+    """Index recipes already in recipes/ by normalized title and by source URL.
+
+    Returns (by_title, by_url), each mapping a key to a set of existing slugs.
+    """
+    by_title: dict[str, set] = defaultdict(set)
+    by_url: dict[str, set] = defaultdict(set)
+    for recipe in load_all_recipes(verbose=False)[0]:
+        title = normalize_title(str(recipe["meta"].get("title") or ""))
+        if title:
+            by_title[title].add(recipe["slug"])
+        url = str((recipe["meta"].get("source") or {}).get("url") or "").strip()
+        if url:
+            by_url[url].add(recipe["slug"])
+    return by_title, by_url
+
+
+def find_duplicate(
+    record: dict,
+    existing_by_title: dict[str, set],
+    existing_by_url: dict[str, set],
+    seen_title: dict[str, set],
+    seen_url: dict[str, set],
+) -> str | None:
+    """Return the slug of an existing recipe this record duplicates, or None.
+
+    Matches on normalized title first (catches the same recipe re-captured with a
+    fresh slug, e.g. 'peanut-butter-and-jelly-sandwich-2'), then on source URL
+    (catches a re-capture whose title was slightly adapted). Records already
+    imported earlier in this same run are also considered via the `seen_*` maps.
+    """
+    title = normalize_title(str(record.get("title") or ""))
+    if title:
+        match = existing_by_title.get(title) or seen_title.get(title)
+        if match:
+            return min(match)
+    url = str((record.get("source") or {}).get("url") or "").strip()
+    if url:
+        match = existing_by_url.get(url) or seen_url.get(url)
+        if match:
+            return min(match)
+    return None
 
 
 def load_records(sources: list[str], use_dir: Path | None) -> list[tuple[str, dict]]:
@@ -149,14 +205,42 @@ def main() -> int:
 
     records = load_records(args.sources, args.dir)
     had_error = False
+    imported = 0
+    skipped = 0
+    duplicated = 0
+
+    existing_by_title, existing_by_url = build_existing_index()
+    seen_title: dict[str, set] = defaultdict(set)
+    seen_url: dict[str, set] = defaultdict(set)
 
     for label, record in records:
         slug, meta, body = build_recipe(record, label, args.publish)
         out_path = args.output_dir / f"{slug}.md"
 
+        # Deduplicate against recipes already in the repo (and this run). The
+        # import bot re-captures the same recipe with a new slug, which would
+        # otherwise silently create a second copy. `--force` skips this so an
+        # intentional update via a matching slug/title still lands.
+        if not args.force:
+            dup_slug = find_duplicate(
+                record, existing_by_title, existing_by_url, seen_title, seen_url
+            )
+            if dup_slug:
+                print(f"DUPLICATE  {label} -> matches existing '{dup_slug}' "
+                      f"(incoming id '{slug}'); skipping")
+                duplicated += 1
+                continue
+            title = normalize_title(str(record.get("title") or ""))
+            if title:
+                seen_title[title].add(slug)
+            url = str((record.get("source") or {}).get("url") or "").strip()
+            if url:
+                seen_url[url].add(slug)
+
         if out_path.exists() and not args.force and not args.dry_run:
             print(f"SKIP  {label} -> {out_path.name} (already exists; use --force to overwrite)")
             had_error = True
+            skipped += 1
             continue
 
         content = render_markdown(meta, body)
@@ -167,6 +251,7 @@ def main() -> int:
             continue
 
         out_path.write_text(content, encoding="utf-8")
+        imported += 1
 
         loaded = {"slug": slug, "path": out_path, "meta": meta, "body": body}
         errors, warnings = validate_one(loaded)
@@ -179,7 +264,8 @@ def main() -> int:
             print(f"      warning: {message}")
 
     if not args.dry_run and records:
-        print(f"\n{len(records)} recipe(s) imported into {args.output_dir}")
+        print(f"\n{imported} recipe(s) imported into {args.output_dir}"
+              f" ({duplicated} duplicate(s) skipped, {skipped} skip(s) due to an existing file)")
         print("Next: python3 tools/validate.py && python3 tools/catalog.py && python3 tools/build_site.py")
 
     return 1 if had_error else 0

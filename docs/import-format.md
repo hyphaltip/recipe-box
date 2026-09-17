@@ -78,3 +78,14 @@ Recipes land with `status: draft` by default — they still need the
 HEALTH-AUDIT pass from `AGENT.md` (a lighter swap or dietary substitution
 note, an honest cuisine/category, nutrition estimate) before being flipped to
 `published` and committed.
+
+## Duplicate protection
+
+`import_recipe.py` refuses to write a recipe that duplicates one already in
+the repo, and skips repeated copies within a single batch. A duplicate is
+recognized by a **matching normalized title** (the usual case when the
+capture bot re-imports a recipe it already sent, producing a fresh `-2`
+slug) or by a **matching `source.url`** (when the same page is re-captured
+after the title was adapted). Such records are reported as `DUPLICATE`, are
+not written, and are not counted as an error. Pass `--force` to bypass the
+dedup guard when you intentionally want to (re-)write a recipe.

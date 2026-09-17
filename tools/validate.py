@@ -224,6 +224,26 @@ def main() -> int:
         print("No recipes found in recipes/ — nothing to validate.")
         return 0
 
+    # Cross-recipe duplicate detection: the import bot can re-capture the same
+    # recipe under a fresh slug (e.g. '...-2'), leaving two near-identical
+    # files. Surfaces them so they can be consolidated.
+    def _norm_title(t):
+        return re.sub(r"[^a-z0-9]+", " ", str(t).lower()).strip()
+
+    dup_groups = 0
+    seen_titles: dict[str, str] = {}
+    for recipe in recipes:
+        key = _norm_title(recipe["meta"].get("title"))
+        if not key:
+            continue
+        existing = seen_titles.get(key)
+        if existing and existing != recipe["slug"]:
+            dup_groups += 1
+            print(f"DUPLICATE  {recipe['path'].name} duplicates '{existing}'"
+                  f" (same title '{recipe['meta']['title']}')")
+        else:
+            seen_titles[key] = recipe["slug"]
+
     error_count = warn_count = 0
     ok_count = 0
     for recipe in recipes:
@@ -252,6 +272,8 @@ def main() -> int:
     total = len(recipes) + len(failures)
     print(f"\n{total} recipe(s): {ok_count} ok, "
           f"{warn_count} warning(s), {error_count} error(s)")
+    if dup_groups:
+        print(f"{dup_groups} duplicate title group(s) — Consolidate them (see AGENT.md).")
     if error_count:
         print("Fix the errors above before committing (see AGENT.md).")
         return 1

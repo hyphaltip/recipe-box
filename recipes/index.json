@@ -1084,6 +1084,70 @@
     "file": "pan-seared-chicken-breast-with-lemon-caper-sauce.md"
   },
   {
+    "id": "peanut-butter-and-jelly-sandwich-2",
+    "title": "Peanut Butter and Jelly Sandwich",
+    "cuisine": "american",
+    "category": "lunch",
+    "servings": 1,
+    "prep_time": 5,
+    "cook_time": 0,
+    "difficulty": "easy",
+    "tags": [
+      "quick",
+      "no-cook",
+      "vegetarian",
+      "budget",
+      "kid-friendly",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 390,
+      "protein_g": 12,
+      "carbs_g": 47,
+      "fat_g": 18
+    },
+    "created": "2026-09-17",
+    "updated": "2026-09-17",
+    "slug": "peanut-butter-and-jelly-sandwich-2",
+    "file": "peanut-butter-and-jelly-sandwich-2.md"
+  },
+  {
+    "id": "peanut-butter-and-jelly-sandwich",
+    "title": "Peanut Butter and Jelly Sandwich",
+    "cuisine": "american",
+    "category": "snack",
+    "servings": 1,
+    "prep_time": 5,
+    "cook_time": 0,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "quick",
+      "budget",
+      "kid-friendly",
+      "no-cook",
+      "comfort-food"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 380,
+      "protein_g": 12,
+      "carbs_g": 46,
+      "fat_g": 18
+    },
+    "created": "2026-09-17",
+    "updated": "2026-09-17",
+    "slug": "peanut-butter-and-jelly-sandwich",
+    "file": "peanut-butter-and-jelly-sandwich.md"
+  },
+  {
     "id": "peruvian-quinoa-soup",
     "title": "Peruvian Quinoa Soup (Sopa de Quinua)",
     "cuisine": "peruvian",

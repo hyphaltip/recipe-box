@@ -38,12 +38,18 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-from recipe_lib import RECIPES_DIR, load_all_recipes, render_markdown, slugify, today
+from recipe_lib import (
+    RECIPES_DIR,
+    load_all_recipes,
+    normalize_title,
+    render_markdown,
+    slugify,
+    today,
+)
 from validate import validate_one
 
 REQUIRED_LIST_FIELDS = ["ingredients", "instructions"]
@@ -52,11 +58,6 @@ REQUIRED_LIST_FIELDS = ["ingredients", "instructions"]
 # ---------------------------------------------------------------------------
 # Duplicate detection
 # ---------------------------------------------------------------------------
-
-
-def normalize_title(title: str) -> str:
-    """Collapse a title to a comparable key (lowercase, strip punctuation)."""
-    return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
 
 
 def build_existing_index() -> tuple[dict[str, set], dict[str, set]]:

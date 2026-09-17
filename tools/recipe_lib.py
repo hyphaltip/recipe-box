@@ -184,6 +184,34 @@ def slugify(text: str, max_length: int = 60) -> str:
     return text[:max_length].rstrip("-")
 
 
+def normalize_title(title: str) -> str:
+    """Collapse a title to a comparable key (lowercase, strip punctuation)."""
+    return re.sub(r"[^a-z0-9]+", " ", str(title or "").lower()).strip()
+
+
+def find_duplicate_slug(title: str, source_url: str | None = None) -> str | None:
+    """Return the slug of an existing recipe that this title/URL duplicates, else None.
+
+    Matches on normalized title first (catches the same recipe re-captured with a
+    fresh slug like '...-2'), then on source URL (catches a re-capture whose
+    title was slightly adapted). Used by the import tool and the capture bot so
+    both refuse to create a second copy of a recipe already in the box.
+    """
+    key = normalize_title(title)
+    url = (source_url or "").strip()
+    if not key and not url:
+        return None
+    matches: set[str] = set()
+    for recipe in load_all_recipes(verbose=False)[0]:
+        if key and normalize_title(recipe["meta"].get("title")) == key:
+            matches.add(recipe["slug"])
+        if url:
+            existing_url = str((recipe["meta"].get("source") or {}).get("url") or "").strip()
+            if existing_url and existing_url == url:
+                matches.add(recipe["slug"])
+    return min(matches) if matches else None
+
+
 def today() -> str:
     return datetime.date.today().isoformat()
 

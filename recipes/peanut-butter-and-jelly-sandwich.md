@@ -2,45 +2,48 @@
 id: peanut-butter-and-jelly-sandwich
 title: Peanut Butter and Jelly Sandwich
 cuisine: american
-category: snack
+category: lunch
 servings: 1
 prep_time: 5
 cook_time: 0
 difficulty: easy
-tags: [vegetarian, quick, budget, kid-friendly, no-cook, comfort-food]
+tags: [quick, no-cook, vegetarian, budget, kid-friendly, comfort-food]
 status: published
 source:
   name: Captured via Telegram
 nutrition:
-  calories: 380
+  calories: 390
   protein_g: 12
-  carbs_g: 46
+  carbs_g: 47
   fat_g: 18
 created: '2026-09-17'
-updated: '2026-09-17'
+updated: 2026-09-17
 ---
 
 # Peanut Butter and Jelly Sandwich
 
-> A classic American lunchbox staple: creamy peanut butter and sweet jelly between soft bread.
+> A timeless American lunchbox classic — creamy peanut butter and sweet fruit jelly sandwiched between soft bread.
 
 ## Ingredients
-- 2 slices sandwich bread (white, wheat, or whole-grain)
-- 2 tbsp peanut butter, smooth or crunchy
+- 2 slices sandwich bread, white or whole wheat
+- 2 tbsp peanut butter, creamy or crunchy
 - 1 tbsp grape jelly or strawberry jam
 
 ## Instructions
-1. Spread peanut butter evenly over one slice of bread, covering edge to edge.
-2. Spread jelly evenly over the second slice of bread, covering edge to edge.
-3. Place the jelly slice on top of the peanut butter slice, jelly side down, and press gently to seal.
-4. Cut in half diagonally and serve immediately.
+1. Place both slices of bread flat on a clean surface or plate.
+2. Spread peanut butter evenly over one slice, covering edge to edge.
+3. Spread jelly evenly over the other slice, covering edge to edge.
+4. Close the sandwich by placing the peanut butter slice on top of the jelly slice, pressing gently until the halves stick together.
+5. Cut in half diagonally or into quarters, if desired, and serve immediately.
 
 ## Notes & Substitutions
-- Swap peanut butter for sunflower seed butter or almond butter for a nut-free or different-flavor option.
-- Use sugar-free jelly or mashed fresh berries for a lower-sugar version.
-- For a gluten-free sandwich, use gluten-free bread; for a vegan one, ensure the bread and jelly are vegan-friendly.
+- For a vegan version, use a fruit spread made without honey or gelatin (most jams are vegan) and check that the peanut butter contains no added honey.
+- For a gluten-free version, use gluten-free sandwich bread.
+- For a nut-free version, swap peanut butter for sunflower seed butter or soy-based WowButter.
+- For a lower-sugar option, use no-sugar-added jam or mash fresh berries with a fork in place of jelly.
+- For extra protein, use whole-grain bread and stir a teaspoon of chia seeds or hemp hearts into the peanut butter before spreading.
 
 ## Storage & Make-Ahead
-- Best eaten fresh; assemble and serve within a few hours for optimal texture.
-- To make ahead, wrap tightly in plastic wrap or place in a paper bag and refrigerate for up to 24 hours — the bread will soften slightly but the sandwich holds up well.
-- Not suitable for freezing; thawed bread becomes soggy.
+- Best enjoyed immediately; the bread softens and the sandwich can become soggy over time.
+- To make ahead, spread peanut butter on both slices of bread (this creates a moisture barrier), add the jelly just before eating, and store the assembled sandwich wrapped in parchment or a reusable container in the fridge for up to 24 hours.
+- If packing for lunch, wrap tightly in wax paper or a reusable sandwich wrap and keep cool until serving.

@@ -8,7 +8,7 @@ prep_time: 5
 cook_time: 0
 difficulty: easy
 tags: [vegetarian, quick, budget, kid-friendly, no-cook, comfort-food]
-status: draft
+status: published
 source:
   name: Captured via Telegram
 nutrition:

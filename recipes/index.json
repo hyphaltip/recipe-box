@@ -241,6 +241,41 @@
     "file": "cheddar-chive-biscuits.md"
   },
   {
+    "id": "classic-chicken-noodle-soup",
+    "title": "Classic Chicken Noodle Soup",
+    "cuisine": "american",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 45,
+    "difficulty": "easy",
+    "tags": [
+      "comfort-food",
+      "healthy",
+      "budget",
+      "kid-friendly",
+      "meal-prep",
+      "winter",
+      "one-pan",
+      "dairy-free",
+      "high-protein"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 360,
+      "protein_g": 33,
+      "carbs_g": 33,
+      "fat_g": 9
+    },
+    "created": "2026-09-17",
+    "updated": "2026-09-17",
+    "slug": "classic-chicken-noodle-soup",
+    "file": "classic-chicken-noodle-soup.md"
+  },
+  {
     "id": "classic-egg-salad-sandwich",
     "title": "Classic Egg Salad Sandwich",
     "cuisine": "american",

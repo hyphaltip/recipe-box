@@ -241,6 +241,68 @@
     "file": "cheddar-chive-biscuits.md"
   },
   {
+    "id": "classic-egg-salad-sandwich-2",
+    "title": "Classic Egg Salad Sandwich",
+    "cuisine": "american",
+    "category": "lunch",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 12,
+    "difficulty": "easy",
+    "tags": [
+      "quick",
+      "budget",
+      "kid-friendly",
+      "meal-prep",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 475,
+      "protein_g": 17,
+      "carbs_g": 29,
+      "fat_g": 32
+    },
+    "created": "2026-09-17",
+    "updated": "2026-09-17",
+    "slug": "classic-egg-salad-sandwich-2",
+    "file": "classic-egg-salad-sandwich-2.md"
+  },
+  {
+    "id": "classic-egg-salad-sandwich",
+    "title": "Classic Egg Salad Sandwich",
+    "cuisine": "american",
+    "category": "lunch",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 12,
+    "difficulty": "easy",
+    "tags": [
+      "quick",
+      "budget",
+      "kid-friendly",
+      "meal-prep",
+      "comfort-food"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 364,
+      "protein_g": 17,
+      "carbs_g": 30,
+      "fat_g": 20
+    },
+    "created": "2026-09-17",
+    "updated": "2026-09-17",
+    "slug": "classic-egg-salad-sandwich",
+    "file": "classic-egg-salad-sandwich.md"
+  },
+  {
     "id": "crispy-roasted-chickpeas",
     "title": "Crispy Roasted Chickpeas",
     "cuisine": "mediterranean",
@@ -1332,6 +1394,38 @@
     "updated": "2026-09-16",
     "slug": "tartine-bread-basic-country-bread",
     "file": "tartine-bread-basic-country-bread.md"
+  },
+  {
+    "id": "tartine-bread-basic-country-dough",
+    "title": "Tartine Bread (Basic Country Dough)",
+    "cuisine": "american",
+    "category": "bread",
+    "servings": 2,
+    "prep_time": 30,
+    "cook_time": 45,
+    "difficulty": "medium",
+    "tags": [
+      "baking",
+      "whole-grain",
+      "vegan",
+      "vegetarian",
+      "comfort-food"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Tartine Bread",
+      "author": "Chad Robertson"
+    },
+    "nutrition": {
+      "calories": 180,
+      "protein_g": 6,
+      "carbs_g": 37,
+      "fat_g": 1
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "tartine-bread-basic-country-dough",
+    "file": "tartine-bread-basic-country-dough.md"
   },
   {
     "id": "thai-green-curry-chicken",

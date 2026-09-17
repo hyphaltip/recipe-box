@@ -8,7 +8,7 @@ prep_time: 15
 cook_time: 12
 difficulty: easy
 tags: [quick, budget, kid-friendly, meal-prep, comfort-food]
-status: draft
+status: published
 source:
   name: Captured via Telegram
 nutrition:

@@ -241,6 +241,38 @@
     "file": "cheddar-chive-biscuits.md"
   },
   {
+    "id": "chicken-noodle-soup-with-spicy-sausage",
+    "title": "Chicken Noodle Soup with Spicy Sausage",
+    "cuisine": "american",
+    "category": "dinner",
+    "servings": 6,
+    "prep_time": 15,
+    "cook_time": 40,
+    "difficulty": "easy",
+    "tags": [
+      "comfort-food",
+      "high-protein",
+      "one-pan",
+      "budget",
+      "meal-prep",
+      "dairy-free"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 310,
+      "protein_g": 21,
+      "carbs_g": 28,
+      "fat_g": 11
+    },
+    "created": "2026-09-17",
+    "updated": "2026-09-17",
+    "slug": "chicken-noodle-soup-with-spicy-sausage",
+    "file": "chicken-noodle-soup-with-spicy-sausage.md"
+  },
+  {
     "id": "classic-chicken-noodle-soup",
     "title": "Classic Chicken Noodle Soup",
     "cuisine": "american",

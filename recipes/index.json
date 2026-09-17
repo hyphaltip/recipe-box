@@ -1160,6 +1160,38 @@
     "file": "sheet-pan-miso-salmon.md"
   },
   {
+    "id": "silky-homemade-vanilla-ice-cream",
+    "title": "Silky Homemade Vanilla Ice Cream",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 8,
+    "prep_time": 10,
+    "cook_time": 5,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "gluten-free",
+      "nut-free",
+      "kid-friendly",
+      "comfort-food",
+      "summer"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 220,
+      "protein_g": 3,
+      "carbs_g": 23,
+      "fat_g": 13
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "silky-homemade-vanilla-ice-cream",
+    "file": "silky-homemade-vanilla-ice-cream.md"
+  },
+  {
     "id": "simple-lentil-soup",
     "title": "Simple Lentil Soup",
     "cuisine": "mediterranean",
@@ -1265,6 +1297,41 @@
     "updated": "2026-09-16",
     "slug": "smashed-cucumber-salad",
     "file": "smashed-cucumber-salad.md"
+  },
+  {
+    "id": "tartine-bread-basic-country-bread",
+    "title": "Tartine Bread (Basic Country Bread)",
+    "cuisine": "american",
+    "category": "bread",
+    "servings": 2,
+    "prep_time": 45,
+    "cook_time": 45,
+    "difficulty": "hard",
+    "tags": [
+      "baking",
+      "whole-grain",
+      "vegetarian",
+      "vegan",
+      "dairy-free",
+      "nut-free",
+      "budget",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Tartine Bread",
+      "author": "Chad Robertson"
+    },
+    "nutrition": {
+      "calories": 250,
+      "protein_g": 8,
+      "carbs_g": 52,
+      "fat_g": 1
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-16",
+    "slug": "tartine-bread-basic-country-bread",
+    "file": "tartine-bread-basic-country-bread.md"
   },
   {
     "id": "thai-green-curry-chicken",

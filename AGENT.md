@@ -96,16 +96,21 @@ python3 tools/catalog.py
 Regenerates `recipes/catalog.md` and `recipes/index.json`. Commit the regenerated
 files together with the recipe.
 
-### 5b. BUILD SITE
+### 5b. BUILD SITE (not committed)
 
 ```bash
-python3 tools/build_site.py
+python3 tools/build_site.py          # optional: preview locally at :8000
+python3 tools/build_site.py --serve
 ```
 
-Regenerates `site/` (index + one page per published recipe). Commit the
-regenerated site alongside the recipe when it should be visible on the web.
-Like the catalog, `site/` is generated — never hand-edit it. Run
-`python3 tools/build_site.py --serve` to preview at http://localhost:8000.
+`site/` is a **generated build artifact and is gitignored** — never commit
+it. On every push to `main` with recipe/meal-plan changes, GitHub Actions
+(`.github/workflows/deploy-site.yml`) checks out the source, runs
+`tools/build_site.py` fresh, and deploys `site/` to GitHub Pages. Because CI
+regenerates it from source, the repository stays a single source of truth
+(recipes, meal-plans, images, tools) and the local tree never drifts out of
+date with the deployed site. Run `build_site.py` locally only to preview;
+the `site/` directory it writes is disposable.
 
 ### 6. COMMIT
 

@@ -17,3 +17,6 @@ Thumbs.db
 
 # Recipe drafts in progress (never committed; published drafts move to recipes/)
 .staging/
+
+# Generated static site (built by tools/build_site.py and deployed by CI)
+site/

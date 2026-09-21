@@ -1089,6 +1089,40 @@
     "file": "no-knead-whole-wheat-bread.md"
   },
   {
+    "id": "oatmeal-cookies",
+    "title": "Oatmeal Cookies",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 24,
+    "prep_time": 15,
+    "cook_time": 12,
+    "difficulty": "easy",
+    "tags": [
+      "baking",
+      "comfort-food",
+      "kid-friendly",
+      "batch-cook",
+      "budget",
+      "dairy-free",
+      "vegetarian",
+      "quick"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Original"
+    },
+    "nutrition": {
+      "calories": 209,
+      "protein_g": 2,
+      "carbs_g": 29,
+      "fat_g": 9
+    },
+    "created": "2026-09-21",
+    "updated": "2026-09-21",
+    "slug": "oatmeal-cookies",
+    "file": "oatmeal-cookies.md"
+  },
+  {
     "id": "olive-oil-citrus-cake",
     "title": "Olive Oil Citrus Cake",
     "cuisine": "mediterranean",

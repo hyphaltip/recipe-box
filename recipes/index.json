@@ -548,6 +548,37 @@
     "file": "black-bean-breakfast-burritos.md"
   },
   {
+    "id": "french-toast",
+    "title": "French Toast",
+    "cuisine": "french",
+    "category": "breakfast",
+    "servings": 4,
+    "prep_time": 5,
+    "cook_time": 10,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "comfort-food",
+      "quick",
+      "kid-friendly",
+      "budget"
+    ],
+    "status": "draft",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 400,
+      "protein_g": 12,
+      "carbs_g": 52,
+      "fat_g": 16
+    },
+    "created": "2026-09-21",
+    "updated": "2026-09-21",
+    "slug": "french-toast",
+    "file": "french-toast.md"
+  },
+  {
     "id": "golden-milk-turmeric-latte",
     "title": "Golden Milk (Turmeric Latte)",
     "cuisine": "indian",

@@ -443,6 +443,35 @@
     "file": "custard-vanilla-ice-cream.md"
   },
   {
+    "id": "eggs-benedict",
+    "title": "Eggs Benedict",
+    "cuisine": "american",
+    "category": "breakfast",
+    "servings": 4,
+    "prep_time": 15,
+    "cook_time": 20,
+    "difficulty": "medium",
+    "tags": [
+      "comfort-food",
+      "holiday",
+      "high-protein"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 550,
+      "protein_g": 28,
+      "carbs_g": 30,
+      "fat_g": 36
+    },
+    "created": "2026-09-21",
+    "updated": "2026-09-21",
+    "slug": "eggs-benedict",
+    "file": "eggs-benedict.md"
+  },
+  {
     "id": "everyday-sourdough-boule",
     "title": "Everyday Sourdough Boule",
     "cuisine": "american",

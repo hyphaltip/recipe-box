@@ -1053,6 +1053,37 @@
     "file": "nasi-goreng.md"
   },
   {
+    "id": "no-bake-chocolate-peanut-butter-oat-cookies",
+    "title": "No-Bake Chocolate Peanut Butter Oat Cookies",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 24,
+    "prep_time": 5,
+    "cook_time": 5,
+    "difficulty": "easy",
+    "tags": [
+      "quick",
+      "budget",
+      "kid-friendly",
+      "vegetarian",
+      "comfort-food"
+    ],
+    "status": "published",
+    "source": {
+      "name": "Captured via Telegram"
+    },
+    "nutrition": {
+      "calories": 170,
+      "protein_g": 3,
+      "carbs_g": 25,
+      "fat_g": 7
+    },
+    "created": "2026-09-21",
+    "updated": "2026-09-21",
+    "slug": "no-bake-chocolate-peanut-butter-oat-cookies",
+    "file": "no-bake-chocolate-peanut-butter-oat-cookies.md"
+  },
+  {
     "id": "no-knead-whole-wheat-bread",
     "title": "No-Knead Whole Wheat Dutch Oven Bread",
     "cuisine": "american",

@@ -1,5 +1,44 @@
 [
   {
+    "id": "apple-cranberry-sauce",
+    "title": "Apple Cranberry Sauce",
+    "cuisine": "american",
+    "category": "sauce",
+    "servings": 8,
+    "prep_time": 5,
+    "cook_time": 20,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "gluten-free",
+      "dairy-free",
+      "nut-free",
+      "quick",
+      "one-pan",
+      "holiday",
+      "seasonal",
+      "winter",
+      "budget",
+      "batch-cook",
+      "meal-prep"
+    ],
+    "status": "published",
+    "source": {
+      "name": "House recipe"
+    },
+    "nutrition": {
+      "calories": 95,
+      "protein_g": 0.3,
+      "carbs_g": 24,
+      "fat_g": 0.1
+    },
+    "created": "2026-11-18",
+    "updated": "2026-11-18",
+    "slug": "apple-cranberry-sauce",
+    "file": "apple-cranberry-sauce.md"
+  },
+  {
     "id": "banana-bread",
     "title": "Banana Bread",
     "cuisine": "american",

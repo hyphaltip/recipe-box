@@ -448,6 +448,40 @@
     "file": "classic-egg-salad-sandwich.md"
   },
   {
+    "id": "creamy-vanilla-cinnamon-rice-pudding",
+    "title": "Creamy Vanilla-Cinnamon Rice Pudding",
+    "cuisine": "american",
+    "category": "dessert",
+    "servings": 6,
+    "prep_time": 5,
+    "cook_time": 45,
+    "difficulty": "easy",
+    "tags": [
+      "vegetarian",
+      "gluten-free",
+      "comfort-food",
+      "budget",
+      "kid-friendly",
+      "one-pan",
+      "winter"
+    ],
+    "status": "published",
+    "source": {
+      "name": "House recipe (curator original)",
+      "author": "Recipe database curator"
+    },
+    "nutrition": {
+      "calories": 245,
+      "protein_g": 7,
+      "carbs_g": 40,
+      "fat_g": 6
+    },
+    "created": "2026-11-18",
+    "updated": "2026-11-18",
+    "slug": "creamy-vanilla-cinnamon-rice-pudding",
+    "file": "creamy-vanilla-cinnamon-rice-pudding.md"
+  },
+  {
     "id": "crispy-roasted-chickpeas",
     "title": "Crispy Roasted Chickpeas",
     "cuisine": "mediterranean",
